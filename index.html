@@ -17,13 +17,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .cdot{width:8px;height:8px;border-radius:50%;background:#475569;flex-shrink:0}
 .cdot.on{background:#10B981}
 .cst{font-size:12px;color:rgba(255,255,255,.4);white-space:nowrap}
-
 .lbar{background:#1E293B;padding:8px 24px;display:none;align-items:center;gap:12px}
 .lbar.show{display:flex}
 .lt{flex:1;height:3px;background:#334155;border-radius:99px;overflow:hidden}
 .lf{height:100%;background:#3B82F6;border-radius:99px;transition:width .4s}
 .ltx{font-size:11px;color:#64748B;white-space:nowrap}
-
 .pbar{background:white;border-bottom:1px solid #E2E8F0;padding:8px 24px;gap:6px;align-items:center;display:none;flex-wrap:wrap}
 .pbar.show{display:flex}
 .pb-lbl{font-size:10px;font-weight:700;color:#94A3B8;text-transform:uppercase;letter-spacing:.08em;margin-right:4px;white-space:nowrap}
@@ -31,19 +29,14 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .pp:hover{border-color:#94A3B8;background:#F8FAFC}
 .pp.on{background:#0F172A;color:white;border-color:#0F172A}
 .sep{width:1px;height:14px;background:#E2E8F0;flex-shrink:0}
-.week-row{display:flex;gap:4px;flex-wrap:wrap;align-items:center;padding:4px 24px 8px;border-top:1px solid #F1F5F9}
-
+.week-row{display:flex;gap:4px;flex-wrap:wrap;align-items:center;padding:4px 0 4px;width:100%}
 .main{padding:20px 24px;max-width:1440px;margin:0 auto;display:none}
 .err{background:#FEF2F2;border:1px solid #FCA5A5;border-radius:10px;padding:12px 16px;color:#991B1B;font-weight:600;font-size:13px;margin-bottom:16px;display:none}
-
 .story{margin-bottom:20px}
 .story-date{font-size:11px;font-weight:700;color:#94A3B8;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
 .story-hl{font-size:22px;font-weight:700;letter-spacing:-.3px;line-height:1.2;margin-bottom:4px}
 .story-sub{font-size:13px;color:#64748B}
-
 .sec-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:#94A3B8;margin:20px 0 12px}
-
-/* KPI cards grid */
 .kpi-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:4px}
 .kcard{background:white;border-radius:12px;padding:16px;border:1px solid #E2E8F0;position:relative;overflow:hidden}
 .kcard::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%}
@@ -57,15 +50,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .kc-bar-wrap{height:6px;background:#F1F5F9;border-radius:99px;overflow:hidden;margin-bottom:6px}
 .kc-bar{height:100%;border-radius:99px;transition:width .6s}
 .kc-footer{font-size:11px;color:#94A3B8;display:flex;justify-content:space-between}
-.kc-trend{font-size:12px;font-weight:600;margin-top:4px}
-.trend-up{color:#059669}.trend-dn{color:#EF4444}.trend-flat{color:#94A3B8}
-
-/* Detail section */
 .section-card{background:white;border-radius:14px;border:1px solid #E2E8F0;padding:20px;margin-bottom:16px}
 .sc-head{font-size:13px;font-weight:700;color:#0F172A;margin-bottom:16px;display:flex;align-items:center;gap:8px}
 .sc-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
-
-/* Metric table */
 .mtable{width:100%;border-collapse:collapse}
 .mtable th{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#94A3B8;padding:6px 8px;text-align:left;border-bottom:1px solid #F1F5F9}
 .mtable td{padding:7px 8px;font-size:13px;border-bottom:1px solid #F8FAFC;vertical-align:middle}
@@ -74,49 +61,29 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .ml{color:#374151;font-weight:500}
 .mv{font-weight:700;color:#0F172A;text-align:right}
 .mv.red{color:#EF4444}.mv.grn{color:#059669}.mv.amb{color:#D97706}
-.mtarget{color:#94A3B8;font-size:12px;text-align:right}
-.mpct{text-align:right}
-.pct-pill{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700}
-
-/* Progress bar inline */
-.mini-bar{display:flex;align-items:center;gap:6px}
-.mb-wrap{flex:1;height:6px;background:#F1F5F9;border-radius:99px;overflow:hidden}
-.mb-fill{height:100%;border-radius:99px}
-
-/* Two col layout */
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
 .three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:16px}
-
-/* Funnel */
 .funnel-step{display:flex;align-items:center;gap:10px;margin-bottom:8px}
 .fs-lbl{font-size:12px;font-weight:600;color:#374151;width:220px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .fs-bw{flex:1;height:10px;background:#F1F5F9;border-radius:99px;overflow:hidden}
 .fs-bf{height:100%;border-radius:99px}
 .fs-v{font-size:12px;font-weight:700;min-width:60px;text-align:right;white-space:nowrap}
-
-/* Chart */
 .chart-wrap{position:relative;height:160px;margin-top:8px}
-
-/* Tabs */
 .tabs{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap}
 .tab{padding:7px 16px;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;background:white;color:#64748B;border:1px solid #E2E8F0;transition:all .1s}
 .tab:hover{border-color:#94A3B8}
 .tab.on{background:#0F172A;color:white;border-color:#0F172A}
 .tsec{display:none}.tsec.on{display:block}
-
-/* Time boxes */
-.time-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
+.time-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:8px}
 .tbox{background:#F8FAFC;border-radius:8px;padding:10px;text-align:center}
 .tb-n{font-size:20px;font-weight:700;color:#0F172A}
 .tb-u{font-size:10px;color:#94A3B8}
 .tb-l{font-size:10px;font-weight:600;color:#64748B;margin-top:2px;line-height:1.3}
-
 @media(max-width:900px){.kpi-grid{grid-template-columns:1fr 1fr}.two-col,.three-col{grid-template-columns:1fr}}
 @media(max-width:560px){.kpi-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-
 <div class="top">
   <div class="logo">APM Ops <span class="badge">NETWORK</span></div>
   <div class="top-right">
@@ -127,17 +94,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <span id="cst" class="cst">Sin conexión</span>
   </div>
 </div>
-
 <div id="lbar" class="lbar">
   <div class="lt"><div class="lf" id="lf" style="width:0"></div></div>
   <span id="ltx" class="ltx">Cargando…</span>
 </div>
-
 <div id="pbar" class="pbar">
   <span class="pb-lbl">Mes</span>
+  <button class="pp on" id="p-03" onclick="setPeriod('03')">Mar</button>
   <button class="pp" id="p-01" onclick="setPeriod('01')">Ene</button>
   <button class="pp" id="p-02" onclick="setPeriod('02')">Feb</button>
-  <button class="pp on" id="p-03" onclick="setPeriod('03')">Mar</button>
   <button class="pp" id="p-04" onclick="setPeriod('04')">Abr</button>
   <button class="pp" id="p-05" onclick="setPeriod('05')">May</button>
   <button class="pp" id="p-06" onclick="setPeriod('06')">Jun</button>
@@ -153,95 +118,86 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <button class="pp" id="p-q3" onclick="setPeriod('q3')">Q3</button>
   <button class="pp" id="p-q4" onclick="setPeriod('q4')">Q4</button>
   <button class="pp" id="p-ytd" onclick="setPeriod('ytd')">YTD 2026</button>
-  <div id="week-row" class="week-row" style="width:100%;padding-left:0"></div>
+  <div id="week-row" class="week-row"></div>
 </div>
 
 <div class="main" id="main">
   <div id="err" class="err"></div>
-
-  <div class="story" id="story">
+  <div class="story">
     <div class="story-date" id="story-date">—</div>
     <div class="story-hl" id="story-hl">Conecta tu Pipedrive para ver los datos</div>
     <div class="story-sub" id="story-sub"></div>
   </div>
-
-  <!-- KPI OVERVIEW -->
   <div class="sec-title">Resumen operacional</div>
   <div class="kpi-grid" id="kpi-grid"></div>
-
-  <!-- TABS -->
   <div class="sec-title" style="margin-top:24px">Detalle por área</div>
   <div class="tabs">
-    <div class="tab on" onclick="showTab('sv')">Survey</div>
-    <div class="tab" onclick="showTab('ap')">Aprobaciones</div>
-    <div class="tab" onclick="showTab('eg')">E&amp;G</div>
-    <div class="tab" onclick="showTab('in')">Instalaciones</div>
-    <div class="tab" onclick="showTab('fu')">Funnel completo</div>
+    <div class="tab on" onclick="showTab('sv',this)">Survey</div>
+    <div class="tab" onclick="showTab('ap',this)">Aprobaciones</div>
+    <div class="tab" onclick="showTab('eg',this)">E&amp;G</div>
+    <div class="tab" onclick="showTab('in',this)">Instalaciones</div>
+    <div class="tab" onclick="showTab('fu',this)">Funnel completo</div>
   </div>
-
   <!-- SURVEY -->
   <div class="tsec on" id="tsec-sv">
     <div class="three-col">
       <div class="section-card">
         <div class="sc-head"><span class="sc-dot" style="background:#7C3AED"></span>Métricas Survey</div>
-        <table class="mtable" id="sv-metrics"></table>
+        <table class="mtable"><tbody id="sv-metrics"></tbody></table>
       </div>
       <div class="section-card">
-        <div class="sc-head"><span class="sc-dot" style="background:#7C3AED"></span>Tiempos medios</div>
+        <div class="sc-head"><span class="sc-dot" style="background:#7C3AED"></span>Tiempos medios (días)</div>
         <div class="time-grid" id="sv-times"></div>
         <div style="margin-top:16px">
-          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#94A3B8;margin-bottom:8px">Desglose int. vs ext.</div>
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#94A3B8;margin-bottom:8px">Internos vs Externos</div>
           <div id="sv-split"></div>
         </div>
       </div>
       <div class="section-card">
-        <div class="sc-head"><span class="sc-dot" style="background:#7C3AED"></span>Evolución mensual</div>
+        <div class="sc-head"><span class="sc-dot" style="background:#7C3AED"></span>Evolución mensual 2026</div>
         <div class="chart-wrap"><canvas id="sv-ch"></canvas></div>
       </div>
     </div>
   </div>
-
   <!-- APROBACIONES -->
   <div class="tsec" id="tsec-ap">
     <div class="two-col">
       <div class="section-card">
-        <div class="sc-head"><span class="sc-dot" style="background:#0EA5E9"></span>Métricas Aprobaciones (RfW)</div>
-        <table class="mtable" id="ap-metrics"></table>
+        <div class="sc-head"><span class="sc-dot" style="background:#0EA5E9"></span>Métricas Aprobaciones</div>
+        <table class="mtable"><tbody id="ap-metrics"></tbody></table>
       </div>
       <div class="section-card">
-        <div class="sc-head"><span class="sc-dot" style="background:#0EA5E9"></span>Tiempos Survey → Instalación</div>
+        <div class="sc-head"><span class="sc-dot" style="background:#0EA5E9"></span>Tiempos Survey → Instalación (días)</div>
         <div class="time-grid" id="ap-times"></div>
       </div>
     </div>
   </div>
-
   <!-- E&G -->
   <div class="tsec" id="tsec-eg">
     <div class="three-col">
       <div class="section-card">
         <div class="sc-head"><span class="sc-dot" style="background:#D97706"></span>Métricas E&amp;G</div>
-        <table class="mtable" id="eg-metrics"></table>
+        <table class="mtable"><tbody id="eg-metrics"></tbody></table>
       </div>
       <div class="section-card">
-        <div class="sc-head"><span class="sc-dot" style="background:#D97706"></span>Tiempos medios</div>
+        <div class="sc-head"><span class="sc-dot" style="background:#D97706"></span>Tiempos medios (días)</div>
         <div class="time-grid" id="eg-times"></div>
       </div>
       <div class="section-card">
-        <div class="sc-head"><span class="sc-dot" style="background:#D97706"></span>Evolución mensual</div>
+        <div class="sc-head"><span class="sc-dot" style="background:#D97706"></span>Evolución mensual 2026</div>
         <div class="chart-wrap"><canvas id="eg-ch"></canvas></div>
       </div>
     </div>
   </div>
-
   <!-- INSTALACIONES -->
   <div class="tsec" id="tsec-in">
     <div class="three-col">
       <div class="section-card">
         <div class="sc-head"><span class="sc-dot" style="background:#059669"></span>Métricas Instalaciones</div>
-        <table class="mtable" id="in-metrics"></table>
+        <table class="mtable"><tbody id="in-metrics"></tbody></table>
       </div>
       <div class="section-card">
-        <div class="sc-head"><span class="sc-dot" style="background:#059669"></span>Desglose por tipo</div>
+        <div class="sc-head"><span class="sc-dot" style="background:#059669"></span>Desglose por tipo de local</div>
         <div id="in-type"></div>
         <div style="margin-top:16px">
           <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#94A3B8;margin-bottom:8px">Extensiones y eliminaciones</div>
@@ -249,12 +205,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
         </div>
       </div>
       <div class="section-card">
-        <div class="sc-head"><span class="sc-dot" style="background:#059669"></span>Evolución mensual</div>
+        <div class="sc-head"><span class="sc-dot" style="background:#059669"></span>Evolución mensual 2026</div>
         <div class="chart-wrap"><canvas id="in-ch"></canvas></div>
       </div>
     </div>
   </div>
-
   <!-- FUNNEL -->
   <div class="tsec" id="tsec-fu">
     <div class="two-col">
@@ -263,7 +218,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
         <div id="funnel"></div>
       </div>
       <div class="section-card">
-        <div class="sc-head"><span class="sc-dot" style="background:#0F172A"></span>Tasas de conversión por mes</div>
+        <div class="sc-head"><span class="sc-dot" style="background:#0F172A"></span>Tasa de conversión mensual (%)</div>
         <div class="chart-wrap"><canvas id="conv-ch"></canvas></div>
       </div>
     </div>
@@ -272,83 +227,73 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
-// ─── CONFIG ──────────────────────────────────────────────────────────────────
-const MONTHS = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+const MONTHS=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
 
-// Targets anuales del KPI excel (mensual)
-const TARGETS = {
+// Targets mensuales del Excel
+const TARGETS={
   survey: [300,552,600,700,650,700,600,250,600,600,650,400],
-  approvals: [260,360,480,550,550,575,500,200,500,550,550,300],
-  eg: [200,300,350,450,450,550,400,200,500,500,500,250],
+  approvals:[260,360,480,550,550,575,500,200,500,550,550,300],
+  eg:      [200,300,350,450,450,550,400,200,500,500,500,250],
   install: [140,181,230,343,385,528,405,255,485,446,457,345]
 };
 
-// Semanas ISO 2026
-const WEEK_RANGES = (()=>{
-  const map={}, w1=new Date('2025-12-29');
-  const today=new Date();
+// ── TODOS los pipelines APM (excluye PUDO y LEAD)
+const APM_PIPELINE_IDS=[1,2,3,4,8,9,13,16,17];
+
+// Field IDs confirmados de tu Pipedrive
+const F={
+  svDone:'9b3b3995f1f726feaee7fdabbe6c7695ef7d7f09',  // O - Survey Completed Date
+  svReq: '67225c24d04109f7fa56373160b7efeb1ba7b857',   // Survey Requested
+  svSch: '5751376cbd3ce91828479ecd16f6ab3913b16f9e',   // Survey Scheduled
+  svProv:'4eeb6232a77052b8f0ad39c199ecf8f2ad0eaa50',   // Survey Provider
+  rdySv: '7ac852e7f10486b93bbdf4a2a16dacc225eed886',   // Ready for Survey
+  egDone:'625c899d638cf47d9435ed048ab7383264b67771',   // O - E&G Completed Date
+  egReq: 'ad7bee71b88f2813747efc61746be52aff2bac8b',   // E&G Requested
+  egSch: 'f4b5f5248662fce649f697db0cd21dce984b93b4',   // E&G Scheduled
+  egProv:'040eb4600ed2df829da452a308a2fdf27b76ddaa',   // E&G Provider
+  inDep: '8d746b4699d7c04a646436b0f1ae4d038b048ebd',   // O - Deployment Completed Date
+  inDone:'32ff0cb858015b0b228d36d01092de298f41d117',   // O - Installation Completed Date
+  inLive:'071737bd6a90d3afc7b0692a1fcbf81c47a6edc2',   // Live Date
+  inSch: 'aacf967fc363fbc73db37cc912b31a2fe343931a',   // Installation Scheduled
+  inFail:'2d1c9283eb6d2cdda5aec4ba91d62e9bdf1c4ceb',   // Installation Issues
+  inRmv: 'fa25efa2dd60a8f4abe4af567d9d3cf5fbf6b978',   // Removed
+  inProv:'e6c9301c6c4c7751d212727024a1cfa507d13992',   // Install Provider
+  land:  '0cc4dfd4e72d45a5f0be9b48743a936cfe6c6a2b',   // Land type (Chain/Franchise/Ind)
+  rdyDep:'fa851cd4c5ed56d0cce21d43d1f1767548b0d5f4',   // O - Ready for Deployment Date
+};
+
+let tok='',PROXY='',OPT={},AD={},charts={},period='03';
+
+// ── HELPERS ──────────────────────────────────────────────────────────────────
+const pct=(a,b)=>b>0?Math.round(a/b*100):0;
+const prog=(p,t)=>{document.getElementById('lf').style.width=p+'%';document.getElementById('ltx').textContent=t};
+const color=(v,g=80,w=55)=>v>=g?'grn':v>=w?'amb':'red';
+const badgeCls=(v,g=80,w=55)=>v>=g?'bg-green':v>=w?'bg-amber':'bg-red';
+const cardCls=(v,g=80,w=55)=>v>=g?'kc-green':v>=w?'kc-amber':'kc-red';
+
+const WEEK_RANGES=(()=>{
+  const map={},w1=new Date('2025-12-29'),today=new Date();
   for(let w=1;w<=53;w++){
-    const s=new Date(w1); s.setDate(w1.getDate()+(w-1)*7);
-    const e=new Date(s); e.setDate(s.getDate()+6);
-    if(e.getFullYear()>=2026 && s<=today){
-      map[`W${w}`]={start:s.toISOString().slice(0,10),end:e.toISOString().slice(0,10),label:`W${w}`};
-    }
+    const s=new Date(w1);s.setDate(w1.getDate()+(w-1)*7);
+    const e=new Date(s);e.setDate(s.getDate()+6);
+    if(e.getFullYear()>=2026&&s<=today) map[`W${w}`]={start:s.toISOString().slice(0,10),end:e.toISOString().slice(0,10)};
   }
   return map;
 })();
 
-// Field IDs (mismos del dashboard de tu compañero — actualiza si difieren)
-const F = {
-  svDone:'9b3b3995f1f726feaee7fdabbe6c7695ef7d7f09',
-  svReq:'67225c24d04109f7fa56373160b7efeb1ba7b857',
-  svSch:'5751376cbd3ce91828479ecd16f6ab3913b16f9e',
-  svProv:'4eeb6232a77052b8f0ad39c199ecf8f2ad0eaa50',
-  rdySv:'7ac852e7f10486b93bbdf4a2a16dacc225eed886',
-  egDone:'625c899d638cf47d9435ed048ab7383264b67771',
-  egReq:'ad7bee71b88f2813747efc61746be52aff2bac8b',
-  egSch:'f4b5f5248662fce649f697db0cd21dce984b93b4',
-  egProv:'040eb4600ed2df829da452a308a2fdf27b76ddaa',
-  inDep:'8d746b4699d7c04a646436b0f1ae4d038b048ebd',
-  inLive:'071737bd6a90d3afc7b0692a1fcbf81c47a6edc2',
-  inSch:'aacf967fc363fbc73db37cc912b31a2fe343931a',
-  inDone:'32ff0cb858015b0b228d36d01092de298f41d117',
-  inFail:'2d1c9283eb6d2cdda5aec4ba91d62e9bdf1c4ceb',
-  inRmv:'fa25efa2dd60a8f4abe4af567d9d3cf5fbf6b978',
-  inProv:'e6c9301c6c4c7751d212727024a1cfa507d13992',
-  land:'0cc4dfd4e72d45a5f0be9b48743a936cfe6c6a2b',
-  appRFW:'',  // rellenar con tu field ID
-};
-
-let tok='', PROXY='', OPT={}, AD={}, charts={}, period='03';
-const today = new Date('2026-03-27');
-
-// ─── HELPERS ─────────────────────────────────────────────────────────────────
-const pct=(a,b)=>b>0?Math.round(a/b*100):0;
-const dif=(a,b)=>b>0?Math.round((a-b)/b*100):null;
-const prog=(p,t)=>{document.getElementById('lf').style.width=p+'%';document.getElementById('ltx').textContent=t};
-const color=(v,good=80,warn=55)=>v>=good?'grn':v>=warn?'amb':'red';
-const badgeCls=(v,good=80,warn=55)=>v>=good?'bg-green':v>=warn?'bg-amber':'bg-red';
-const cardCls=(v,good=80,warn=55)=>v>=good?'kc-green':v>=warn?'kc-amber':'kc-red';
-
 function inPrd(d,f){
-  const v=d[f]; if(!v) return false;
+  const v=d[f];if(!v)return false;
   const s=String(v).slice(0,10);
   if(period==='ytd') return s.startsWith('2026');
   if(period.startsWith('q')){
     const qm={q1:['01','02','03'],q2:['04','05','06'],q3:['07','08','09'],q4:['10','11','12']};
-    return (qm[period]||[]).some(m=>s.startsWith('2026-'+m));
+    return(qm[period]||[]).some(m=>s.startsWith('2026-'+m));
   }
-  if(period.startsWith('W')){
-    const r=WEEK_RANGES[period]; if(!r) return false;
-    return s>=r.start&&s<=r.end;
-  }
+  if(period.startsWith('W')){const r=WEEK_RANGES[period];if(!r)return false;return s>=r.start&&s<=r.end;}
   return s.startsWith('2026-'+period);
 }
 function byM(arr,f,m){
-  return arr.filter(d=>{
-    const v=d[f]; if(!v) return false;
-    return String(v).startsWith('2026-'+String(m+1).padStart(2,'0'));
-  }).length;
+  return arr.filter(d=>{const v=d[f];if(!v)return false;return String(v).startsWith('2026-'+String(m+1).padStart(2,'0'));}).length;
 }
 function cntP(arr,f){return arr.filter(d=>inPrd(d,f)).length;}
 function avgDays(arr,f1,f2){
@@ -357,18 +302,18 @@ function avgDays(arr,f1,f2){
 }
 const resolveEnum=v=>OPT[v]||OPT[String(v)]||String(v||'');
 
-// ─── API ──────────────────────────────────────────────────────────────────────
+// ── API ──────────────────────────────────────────────────────────────────────
 async function api(path){
   const r=await fetch(`${PROXY}/pipedrive${path}`,{headers:{'x-pipedrive-token':tok}});
-  if(!r.ok) throw new Error('HTTP '+r.status);
+  if(!r.ok)throw new Error('HTTP '+r.status+' → '+path);
   return r.json();
 }
-async function fetchPipe(id,max=25){
+async function fetchPipe(id,max=30){
   let all=[],start=0;
   for(let i=0;i<max;i++){
     const d=await api(`/pipelines/${id}/deals?limit=500&start=${start}`);
-    const b=d.data||[]; all=all.concat(b);
-    if(!d.additional_data?.pagination?.more_items_in_collection||b.length<500) break;
+    const b=d.data||[];all=all.concat(b);
+    if(!d.additional_data?.pagination?.more_items_in_collection||b.length<500)break;
     start+=500;
   }
   return all;
@@ -378,25 +323,7 @@ async function buildOpts(){
   (d.data||[]).forEach(f=>(f.options||[]).forEach(o=>{OPT[o.id]=o.label;OPT[String(o.id)]=o.label;}));
 }
 
-// ─── FIND PIPELINES BY NAME ───────────────────────────────────────────────────
-async function findAPMPipelines(){
-  const d=await api('/pipelines?limit=100');
-  const pipes={};
-  (d.data||[]).forEach(p=>{
-    const n=p.name.toLowerCase();
-    if(n.includes('survey')) pipes.survey=p.id;
-    else if(n.includes('e&g')||n.includes('e & g')||n.includes('electrical')) pipes.eg=p.id;
-    else if(n.includes('install')) pipes.install=p.id;
-    else if(n.includes('live')) pipes.live=p.id;
-    else if(n.includes('acquisition')||n.includes('acqui')) pipes.acquisition=p.id;
-    else if(n.includes('network design')||n.includes('network')) pipes.network=p.id;
-    else if(n.includes('disaster')) pipes.disaster=p.id;
-    else if(n.includes('extension')||n.includes('relocation')) pipes.extension=p.id;
-  });
-  return pipes;
-}
-
-// ─── CONNECT ──────────────────────────────────────────────────────────────────
+// ── CONNECT ──────────────────────────────────────────────────────────────────
 async function go(){
   tok=document.getElementById('tok').value.trim();
   PROXY=document.getElementById('proxy').value.trim().replace(/\/$/,'');
@@ -408,217 +335,199 @@ async function go(){
   document.getElementById('cst').textContent='Conectando…';
   document.getElementById('lbar').classList.add('show');
   try{
-    prog(5,'Resolviendo opciones de campos…'); await buildOpts();
-    prog(12,'Detectando pipelines APM…');
-    const pipes=await findAPMPipelines();
-    console.log('Pipelines encontrados:',pipes);
-
-    prog(20,'Cargando Survey…');    const sv=pipes.survey?await fetchPipe(pipes.survey,20):[];
-    prog(35,'Cargando E&G…');       const eg=pipes.eg?await fetchPipe(pipes.eg,20):[];
-    prog(50,'Cargando Instalación…');const in4=pipes.install?await fetchPipe(pipes.install,20):[];
-    prog(62,'Cargando Live…');       const lv=pipes.live?await fetchPipe(pipes.live,30):[];
-    prog(72,'Cargando Acquisition…');const acq=pipes.acquisition?await fetchPipe(pipes.acquisition,10):[];
-    prog(82,'Cargando Otros APM…');
-    const ext=pipes.extension?await fetchPipe(pipes.extension,10):[];
-    const dis=pipes.disaster?await fetchPipe(pipes.disaster,10):[];
+    prog(5,'Resolviendo campos…');await buildOpts();
+    // Cargar todos los pipelines APM en paralelo por lotes
+    const pipeNames={1:'Acquisition',2:'Survey',3:'E&G',4:'Installation',8:'Network Design',9:'Live',13:'Disaster',16:'Acq.Ext',17:'Extension'};
+    let loaded=0;
+    const results=await Promise.all(APM_PIPELINE_IDS.map(async id=>{
+      const deals=await fetchPipe(id,30);
+      loaded++;
+      prog(10+Math.round(loaded/APM_PIPELINE_IDS.length*80),`Cargando ${pipeNames[id]||id}… (${loaded}/${APM_PIPELINE_IDS.length})`);
+      return deals;
+    }));
     prog(92,'Construyendo dashboard…');
-
-    AD={sv,eg,ins:in4,lv,acq,ext,dis,all:[...sv,...eg,...in4,...lv,...acq,...ext,...dis]};
+    const all=results.flat();
+    AD={all};
     buildWeekButtons();
     render();
-
     prog(100,'Listo');
     setTimeout(()=>document.getElementById('lbar').classList.remove('show'),600);
     document.getElementById('cdot').className='cdot on';
-    document.getElementById('cst').textContent=`${AD.all.length.toLocaleString()} deals cargados`;
+    document.getElementById('cst').textContent=`${all.length.toLocaleString()} deals cargados de ${APM_PIPELINE_IDS.length} pipelines APM`;
     document.getElementById('main').style.display='block';
     document.getElementById('pbar').classList.add('show');
   }catch(e){
     document.getElementById('lbar').classList.remove('show');
     const el=document.getElementById('err');
-    el.textContent='Error: '+e.message+'. Verifica el token y la URL del proxy.';
+    el.textContent='Error: '+e.message;
     el.style.display='block';
     document.getElementById('main').style.display='block';
     document.getElementById('cst').textContent='Error';
   }
 }
 
-// ─── PERIOD ───────────────────────────────────────────────────────────────────
+// ── PERIOD ───────────────────────────────────────────────────────────────────
 function setPeriod(p){
   period=p;
   document.querySelectorAll('.pp').forEach(el=>el.classList.remove('on'));
   const el=document.getElementById('p-'+p);
-  if(el) el.classList.add('on');
-  if(AD.all) render();
+  if(el)el.classList.add('on');
+  if(AD.all)render();
 }
 
-// ─── RENDER ───────────────────────────────────────────────────────────────────
+// ── RENDER ───────────────────────────────────────────────────────────────────
 function render(){
-  const{sv,eg,ins,lv,all}=AD;
+  const{all}=AD;
 
-  // Current period counts
-  const rdySv=cntP(all,F.rdySv);
+  // Conteos por campo de fecha (independiente del pipeline)
   const svDone=cntP(all,F.svDone);
   const svReq=cntP(all,F.svReq);
   const svSch=cntP(all,F.svSch);
-  const svLost=sv.filter(d=>inPrd(d,'lost_time')&&d.status==='lost').length;
-
+  const rdySv=cntP(all,F.rdySv);
   const egDone=cntP(all,F.egDone);
   const egReq=cntP(all,F.egReq);
   const egSch=cntP(all,F.egSch);
-  const egLost=eg.filter(d=>inPrd(d,'lost_time')&&d.status==='lost').length;
-
   const inDep=cntP(all,F.inDep);
+  const inDone=cntP(all,F.inDone);
   const inLive=cntP(all,F.inLive);
   const inSch=cntP(all,F.inSch);
-  const inDone=cntP(all,F.inDone);
   const inFail=cntP(all,F.inFail);
   const inRmv=cntP(all,F.inRmv);
+  const svLost=all.filter(d=>inPrd(d,'lost_time')&&d.status==='lost'&&d[F.svDone]).length;
+  const egLost=all.filter(d=>inPrd(d,'lost_time')&&d.status==='lost'&&d[F.egDone]).length;
 
-  // Month index for targets
+  // Desglose ext/int survey
+  const svInt=all.filter(d=>inPrd(d,F.svDone)&&d[F.svProv]&&resolveEnum(d[F.svProv]).toLowerCase().includes('inpost')).length;
+  const svExt=svDone-svInt;
+
+  // Desglose tipo local
+  const inChain=all.filter(d=>inPrd(d,F.inDep)&&String(d[F.land]||'').toLowerCase().includes('chain')).length;
+  const inFra=all.filter(d=>inPrd(d,F.inDep)&&String(d[F.land]||'').toLowerCase().includes('franchise')).length;
+  const inInd=all.filter(d=>inPrd(d,F.inDep)&&String(d[F.land]||'').toLowerCase().includes('independent')).length;
+
+  // Targets
   const mIdx={'01':0,'02':1,'03':2,'04':3,'05':4,'06':5,'07':6,'08':7,'09':8,'10':9,'11':10,'12':11};
   const mi=mIdx[period]??null;
-  const tSv=mi!==null?TARGETS.survey[mi]:TARGETS.survey.reduce((a,b)=>a+b,0);
-  const tEg=mi!==null?TARGETS.eg[mi]:TARGETS.eg.reduce((a,b)=>a+b,0);
-  const tIn=mi!==null?TARGETS.install[mi]:TARGETS.install.reduce((a,b)=>a+b,0);
-  const tAp=mi!==null?TARGETS.approvals[mi]:TARGETS.approvals.reduce((a,b)=>a+b,0);
+  const sumT=arr=>arr.reduce((a,b)=>a+b,0);
+  const getT=(arr)=>{
+    if(mi!==null)return arr[mi];
+    if(period.startsWith('q')){const qm={q1:[0,1,2],q2:[3,4,5],q3:[6,7,8],q4:[9,10,11]};return(qm[period]||[]).reduce((s,i)=>s+arr[i],0);}
+    return sumT(arr);
+  };
+  const tSv=getT(TARGETS.survey),tEg=getT(TARGETS.eg),tIn=getT(TARGETS.install),tAp=getT(TARGETS.approvals);
 
-  const svAch=pct(svDone,tSv);
-  const egAch=pct(egDone,tEg);
-  const inAch=pct(inDep,tIn);
+  const svAch=pct(svDone,tSv),egAch=pct(egDone,tEg),inAch=pct(inDep,tIn);
+  const svConv=pct(svDone,rdySv),egConv=pct(egDone,svDone),inConv=pct(inDep,egDone);
+  const svLostPct=pct(svLost,svDone),egLostPct=pct(egLost,egDone),inIssuePct=pct(inFail,inDep);
 
-  // Conversion rates
-  const svConv=pct(svDone,rdySv);
-  const egConv=pct(egDone,svDone);
-  const inConv=pct(inDep,egDone);
-
-  // Avg times
+  // Tiempos
   const tSvRS=avgDays(all,F.svReq,F.svSch);
+  const tSvSD=avgDays(all,F.svSch,F.svDone);
   const tEgRS=avgDays(all,F.egReq,F.egSch);
   const tEgSD=avgDays(all,F.egSch,F.egDone);
   const tInSD=avgDays(all,F.inSch,F.inDep);
+  const tSvIn=avgDays(all,F.svDone,F.inDep);
+  const tEgIn=avgDays(all,F.egDone,F.inDep);
 
-  // Monthly arrays (for charts)
+  // Arrays mensuales para gráficos
   const svArr=MONTHS.map((_,m)=>byM(all,F.svDone,m));
   const egArr=MONTHS.map((_,m)=>byM(all,F.egDone,m));
   const inArr=MONTHS.map((_,m)=>byM(all,F.inDep,m));
 
-  // Period label
-  const pLabels={'01':'Enero 2026','02':'Febrero 2026','03':'Marzo 2026','04':'Abril 2026','05':'Mayo 2026','06':'Junio 2026','07':'Julio 2026','08':'Agosto 2026','09':'Septiembre 2026','10':'Octubre 2026','11':'Noviembre 2026','12':'Diciembre 2026','q1':'Q1 2026','q2':'Q2 2026','q3':'Q3 2026','q4':'Q4 2026','ytd':'Año completo 2026'};
-  document.getElementById('story-date').textContent=pLabels[period]||period;
+  // Periodo label
+  const pL={'01':'Enero','02':'Febrero','03':'Marzo','04':'Abril','05':'Mayo','06':'Junio','07':'Julio','08':'Agosto','09':'Septiembre','10':'Octubre','11':'Noviembre','12':'Diciembre',q1:'Q1',q2:'Q2',q3:'Q3',q4:'Q4',ytd:'Año completo'};
+  document.getElementById('story-date').textContent=(pL[period]||period)+' 2026';
 
   // Headline
-  const bottleneck=[
-    {l:'Ready→Survey',p:svConv},{l:'Survey→E&G',p:egConv},{l:'E&G→Instalación',p:inConv}
-  ].filter(s=>s.p>0).sort((a,b)=>a.p-b.p)[0];
+  const bn=[{l:'Ready→Survey',p:svConv},{l:'Survey→E&G',p:egConv},{l:'E&G→Deploy',p:inConv}].filter(s=>s.p>0).sort((a,b)=>a.p-b.p)[0];
   document.getElementById('story-hl').textContent=
-    inDep===0?'Sin datos para este periodo. Verifica los field IDs en la configuración.'
-    :bottleneck&&bottleneck.p<60?`${inDep} máquinas desplegadas. Principal cuello de botella: ${bottleneck.l} (${bottleneck.p}%)`
-    :`Buen rendimiento. ${inDep} máquinas desplegadas · Survey ${svAch}% · E&G ${egAch}% · Install ${inAch}% del objetivo.`;
+    inDep===0?'Sin datos para este periodo.'
+    :bn&&bn.p<60?`${inDep} máquinas desplegadas. Cuello de botella: ${bn.l} (${bn.p}%)`
+    :`${inDep} máquinas desplegadas · Survey ${svAch}% · E&G ${egAch}% · Instalaciones ${inAch}% del objetivo`;
   document.getElementById('story-sub').textContent=
-    `Survey: ${svDone}/${tSv} · E&G: ${egDone}/${tEg} · Instalaciones: ${inDep}/${tIn} · Live: ${inLive}`;
+    `Survey: ${svDone}/${tSv} · E&G: ${egDone}/${tEg} · Deploy: ${inDep}/${tIn} · Live: ${inLive}`;
 
-  // ── KPI CARDS ─────────────────────────────────────────────────────────────
-  const cards=[
-    {label:'Survey completados',num:svDone,target:tSv,ach:svAch,sub:`Objetivo: ${tSv} · Conv: ${svConv}%`,color:cardCls(svAch),badge:badgeCls(svAch),badgeText:svAch+'%'},
-    {label:'E&G completados',num:egDone,target:tEg,ach:egAch,sub:`Objetivo: ${tEg} · Conv: ${egConv}%`,color:cardCls(egAch),badge:badgeCls(egAch),badgeText:egAch+'%'},
-    {label:'Máquinas desplegadas',num:inDep,target:tIn,ach:inAch,sub:`Objetivo: ${tIn} · Live: ${inLive}`,color:cardCls(inAch),badge:badgeCls(inAch),badgeText:inAch+'%'},
-    {label:'Máquinas Live',num:inLive,target:inDep,ach:pct(inLive,inDep),sub:`De ${inDep} desplegadas`,color:'kc-blue',badge:'bg-blue',badgeText:pct(inLive,inDep)+'%'},
-  ];
-  document.getElementById('kpi-grid').innerHTML=cards.map(c=>`
-    <div class="kcard ${c.color}">
-      <div class="kc-head">
-        <div class="kc-label">${c.label}</div>
-        <span class="kc-badge ${c.badge}">${c.badgeText}</span>
-      </div>
-      <div class="kc-num">${c.num.toLocaleString()}</div>
-      <div class="kc-sub">${c.sub}</div>
-      <div class="kc-bar-wrap"><div class="kc-bar" style="width:${Math.min(c.ach,100)}%;background:${c.ach>=80?'#10B981':c.ach>=55?'#F59E0B':'#EF4444'}"></div></div>
-      <div class="kc-footer"><span>${c.ach}% del objetivo</span><span>Target: ${c.target}</span></div>
-    </div>`).join('');
+  // ── KPI CARDS
+  document.getElementById('kpi-grid').innerHTML=[
+    {l:'Survey completados',n:svDone,t:tSv,a:svAch,s:`Objetivo: ${tSv} · Conv: ${svConv}%`},
+    {l:'E&G completados',n:egDone,t:tEg,a:egAch,s:`Objetivo: ${tEg} · Conv: ${egConv}%`},
+    {l:'Máquinas desplegadas',n:inDep,t:tIn,a:inAch,s:`Objetivo: ${tIn} · Live: ${inLive}`},
+    {l:'Máquinas Live',n:inLive,t:inDep,a:pct(inLive,inDep),s:`De ${inDep} desplegadas`},
+  ].map(c=>`<div class="kcard ${cardCls(c.a)}">
+    <div class="kc-head"><div class="kc-label">${c.l}</div><span class="kc-badge ${badgeCls(c.a)}">${c.a}%</span></div>
+    <div class="kc-num">${c.n.toLocaleString()}</div>
+    <div class="kc-sub">${c.s}</div>
+    <div class="kc-bar-wrap"><div class="kc-bar" style="width:${Math.min(c.a,100)}%;background:${c.a>=80?'#10B981':c.a>=55?'#F59E0B':'#EF4444'}"></div></div>
+    <div class="kc-footer"><span>${c.a}% del objetivo</span><span>Target: ${c.t}</span></div>
+  </div>`).join('');
 
-  // ── SURVEY TAB ────────────────────────────────────────────────────────────
-  const svIntP=all.filter(d=>inPrd(d,F.svDone)&&d[F.svProv]&&resolveEnum(d[F.svProv]).toLowerCase().includes('inpost')).length;
-  const svExtP=svDone-svIntP;
-  const svLostPct=pct(svLost,svDone);
-
+  // ── SURVEY TAB
   document.getElementById('sv-metrics').innerHTML=rows([
-    {l:'Surveys completados',v:svDone,cls:''},
-    {l:'Objetivo',v:tSv,cls:''},
-    {l:'% Consecución',v:svAch+'%',cls:color(svAch)},
-    {l:'Survey externos',v:svExtP,cls:''},
-    {l:'Survey internos',v:svIntP,cls:''},
-    {l:'Survey programados',v:svSch,cls:''},
-    {l:'Fuera de fecha',v:svSch-svDone>0?svSch-svDone:0,cls:''},
-    {l:'Solicitudes externas',v:svReq,cls:''},
-    {l:'Sin posib. de avanzar',v:svLost,cls:svLostPct>40?'red':svLostPct>25?'amb':''},
-    {l:'% Perdidos',v:svLostPct+'%',cls:svLostPct>40?'red':svLostPct>25?'amb':''},
-    {l:'Nuevas ubicaciones ready',v:rdySv,cls:''},
-    {l:'Conversión ready→done',v:svConv+'%',cls:color(svConv)},
+    {l:'Surveys completados',v:svDone},
+    {l:'Objetivo',v:tSv},
+    {l:'% Consecución',v:svAch+'%',c:color(svAch)},
+    {l:'Externos',v:svExt},{l:'Internos',v:svInt},
+    {l:'Programados',v:svSch},
+    {l:'Solicitudes a externos',v:svReq},
+    {l:'Nuevas ubicaciones (ready)',v:rdySv},
+    {l:'Sin posibilidad de avanzar',v:svLost,c:svLostPct>40?'red':svLostPct>25?'amb':''},
+    {l:'% Sin posibilidad',v:svLostPct+'%',c:svLostPct>40?'red':svLostPct>25?'amb':''},
+    {l:'Conversión ready→survey',v:svConv+'%',c:color(svConv)},
   ]);
   document.getElementById('sv-times').innerHTML=timeBoxes([
-    {n:tSvRS,u:'días',l:'Solicitud → Programación'},
-    {n:avgDays(all,F.svSch,F.svDone),u:'días',l:'Programación → Realización'},
+    {n:tSvRS,l:'Solicitud → Programación'},{n:tSvSD,l:'Programación → Realización'},
   ]);
-  document.getElementById('sv-split').innerHTML=splitBar(svIntP,svExtP,'InPost','Externos');
+  document.getElementById('sv-split').innerHTML=splitBar(svInt,svExt,'InPost','Externos');
 
-  // ── APPROVALS TAB ─────────────────────────────────────────────────────────
-  const apLoc=all.filter(d=>inPrd(d,F.rdySv)).length; // placeholder
+  // ── APROBACIONES TAB
   document.getElementById('ap-metrics').innerHTML=rows([
-    {l:'Ubicaciones aprobadas (RfW)',v:apLoc,cls:''},
-    {l:'Objetivo aprobaciones',v:tAp,cls:''},
-    {l:'% Consecución',v:pct(apLoc,tAp)+'%',cls:color(pct(apLoc,tAp))},
-    {l:'Rechazadas por partner',v:0,cls:''},
+    {l:'Ubicaciones ready',v:rdySv},
+    {l:'Survey completados',v:svDone},
+    {l:'Objetivo aprobaciones',v:tAp},
+    {l:'% Consecución',v:pct(svDone,tAp)+'%',c:color(pct(svDone,tAp))},
   ]);
   document.getElementById('ap-times').innerHTML=timeBoxes([
-    {n:avgDays(all,F.svDone,F.egReq),u:'días',l:'Survey → Inicio E&G'},
-    {n:avgDays(all,F.svDone,F.inDep),u:'días',l:'Survey → Instalación'},
-    {n:avgDays(all,F.egDone,F.inDep),u:'días',l:'E&G → Instalación'},
+    {n:tSvIn,l:'Survey → Instalación'},{n:tEgIn,l:'E&G → Instalación'},
+    {n:avgDays(all,F.svDone,F.egDone),l:'Survey → E&G'},{n:tInSD,l:'Programado → Deploy'},
   ]);
 
-  // ── E&G TAB ───────────────────────────────────────────────────────────────
-  const egLostPct=pct(egLost,egDone);
+  // ── E&G TAB
   document.getElementById('eg-metrics').innerHTML=rows([
-    {l:'E&G completados (RfD)',v:egDone,cls:''},
-    {l:'Objetivo E&G',v:tEg,cls:''},
-    {l:'% Consecución',v:egAch+'%',cls:color(egAch)},
-    {l:'Solicitados a externos',v:egReq,cls:''},
-    {l:'E&G programados',v:egSch,cls:''},
-    {l:'Fallidos',v:egLost,cls:egLost>5?'red':''},
-    {l:'% Fallidos',v:egLostPct+'%',cls:egLostPct>10?'red':egLostPct>5?'amb':''},
-    {l:'Conversión Survey→E&G',v:egConv+'%',cls:color(egConv)},
+    {l:'E&G completados (RfD)',v:egDone},
+    {l:'Objetivo E&G',v:tEg},
+    {l:'% Consecución',v:egAch+'%',c:color(egAch)},
+    {l:'Solicitados',v:egReq},{l:'Programados',v:egSch},
+    {l:'Fallidos',v:egLost,c:egLostPct>10?'red':egLostPct>5?'amb':''},
+    {l:'% Fallidos',v:egLostPct+'%',c:egLostPct>10?'red':egLostPct>5?'amb':''},
+    {l:'Conversión Survey→E&G',v:egConv+'%',c:color(egConv)},
   ]);
   document.getElementById('eg-times').innerHTML=timeBoxes([
-    {n:tEgRS,u:'días',l:'Solicitud → Programación'},
-    {n:tEgSD,u:'días',l:'Programación → Realización'},
+    {n:tEgRS,l:'Solicitud → Programación'},{n:tEgSD,l:'Programación → Realización'},
   ]);
 
-  // ── INSTALL TAB ───────────────────────────────────────────────────────────
-  const inChain=all.filter(d=>inPrd(d,F.inDep)&&String(d[F.land]||'').includes('Chain')).length;
-  const inIndFra=inDep-inChain;
-  const inIssuePct=pct(inFail,inDep);
+  // ── INSTALACIONES TAB
   document.getElementById('in-metrics').innerHTML=rows([
-    {l:'Máquinas desplegadas',v:inDep,cls:''},
-    {l:'Objetivo instalaciones',v:tIn,cls:''},
-    {l:'% Consecución',v:inAch+'%',cls:color(inAch)},
-    {l:'Máquinas Live',v:inLive,cls:''},
-    {l:'Instalaciones programadas',v:inSch,cls:''},
-    {l:'Con incidencias pendientes',v:inFail,cls:inFail>5?'amb':''},
-    {l:'% Incidencias',v:inIssuePct+'%',cls:inIssuePct>10?'red':inIssuePct>5?'amb':''},
-    {l:'APMs eliminados',v:inRmv,cls:inRmv>5?'amb':''},
-    {l:'Conversión E&G→Instalación',v:inConv+'%',cls:color(inConv)},
+    {l:'Máquinas desplegadas',v:inDep},
+    {l:'Objetivo instalaciones',v:tIn},
+    {l:'% Consecución',v:inAch+'%',c:color(inAch)},
+    {l:'Instalaciones completadas',v:inDone},
+    {l:'Máquinas Live',v:inLive},
+    {l:'Programadas',v:inSch},
+    {l:'Con incidencias pendientes',v:inFail,c:inIssuePct>10?'red':inIssuePct>5?'amb':''},
+    {l:'% Incidencias',v:inIssuePct+'%',c:inIssuePct>10?'red':inIssuePct>5?'amb':''},
+    {l:'APMs eliminados',v:inRmv,c:inRmv>5?'amb':''},
+    {l:'Conversión E&G→Deploy',v:inConv+'%',c:color(inConv)},
   ]);
   document.getElementById('in-type').innerHTML=`
-    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#94A3B8;margin-bottom:8px">Por tipo de local</div>
-    ${funnelRows([{l:'Chains',v:inChain,c:'#1D4ED8'},{l:'Ind + Franchise',v:inIndFra,c:'#7C3AED'}],inDep)}`;
+    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#94A3B8;margin-bottom:10px">Por tipo de local</div>
+    ${funnelRows([{l:'Chains',v:inChain,c:'#1D4ED8'},{l:'Franchise',v:inFra,c:'#7C3AED'},{l:'Independent',v:inInd,c:'#0EA5E9'}],inDep)}`;
   document.getElementById('in-ext').innerHTML=funnelRows([
-    {l:'Extensiones desplegadas',v:cntP(all,F.inDep),c:'#059669'},
     {l:'APMs eliminados',v:inRmv,c:'#EF4444'},
-  ],Math.max(cntP(all,F.inDep),inRmv,1));
+  ],Math.max(inRmv,1));
 
-  // ── FUNNEL ────────────────────────────────────────────────────────────────
+  // ── FUNNEL
   const fSteps=[
-    {l:'Ubicaciones ready (entrada)',v:rdySv,c:'#64748B'},
+    {l:'Ready for Survey',v:rdySv,c:'#64748B'},
     {l:'Survey completado',v:svDone,c:'#7C3AED'},
     {l:'E&G completado',v:egDone,c:'#D97706'},
     {l:'Instalación programada',v:inSch,c:'#0EA5E9'},
@@ -637,46 +546,38 @@ function render(){
     </div>`;
   }).join('');
 
-  // ── CHARTS ────────────────────────────────────────────────────────────────
-  mkBar('sv-ch','Survey completados',svArr,'#7C3AED',TARGETS.survey);
-  mkBar('eg-ch','E&G completados',egArr,'#D97706',TARGETS.eg);
-  mkBar('in-ch','Máquinas desplegadas',inArr,'#059669',TARGETS.install);
-  mkLine('conv-ch',
-    ['Ene','Feb','Mar'],
-    [
-      {l:'Survey conv%',d:[pct(byM(all,F.svDone,0),byM(all,F.rdySv,0)),pct(byM(all,F.svDone,1),byM(all,F.rdySv,1)),pct(byM(all,F.svDone,2),byM(all,F.rdySv,2))],c:'#7C3AED'},
-      {l:'E&G conv%',d:[pct(byM(all,F.egDone,0),byM(all,F.svDone,0)),pct(byM(all,F.egDone,1),byM(all,F.svDone,1)),pct(byM(all,F.egDone,2),byM(all,F.svDone,2))],c:'#D97706'},
-      {l:'Install conv%',d:[pct(byM(all,F.inDep,0),byM(all,F.egDone,0)),pct(byM(all,F.inDep,1),byM(all,F.egDone,1)),pct(byM(all,F.inDep,2),byM(all,F.egDone,2))],c:'#059669'},
-    ]
-  );
+  // ── CHARTS
+  mkBar('sv-ch',svArr,'#7C3AED',TARGETS.survey);
+  mkBar('eg-ch',egArr,'#D97706',TARGETS.eg);
+  mkBar('in-ch',inArr,'#059669',TARGETS.install);
+  mkLine('conv-ch',['Ene','Feb','Mar'],[
+    {l:'Survey',d:[pct(byM(all,F.svDone,0),byM(all,F.rdySv,0)),pct(byM(all,F.svDone,1),byM(all,F.rdySv,1)),pct(byM(all,F.svDone,2),byM(all,F.rdySv,2))],c:'#7C3AED'},
+    {l:'E&G',d:[pct(byM(all,F.egDone,0),byM(all,F.svDone,0)),pct(byM(all,F.egDone,1),byM(all,F.svDone,1)),pct(byM(all,F.egDone,2),byM(all,F.svDone,2))],c:'#D97706'},
+    {l:'Deploy',d:[pct(byM(all,F.inDep,0),byM(all,F.egDone,0)),pct(byM(all,F.inDep,1),byM(all,F.egDone,1)),pct(byM(all,F.inDep,2),byM(all,F.egDone,2))],c:'#059669'},
+  ]);
 }
 
-// ─── UI HELPERS ───────────────────────────────────────────────────────────────
+// ── UI HELPERS ───────────────────────────────────────────────────────────────
 function rows(data){
   return data.map(r=>`<tr>
     <td class="ml">${r.l}</td>
-    <td class="mv ${r.cls||''}">${typeof r.v==='number'?r.v.toLocaleString():r.v}</td>
+    <td class="mv ${r.c||''}">${typeof r.v==='number'?r.v.toLocaleString():r.v}</td>
   </tr>`).join('');
 }
 function timeBoxes(data){
   return data.map(t=>`<div class="tbox">
-    <div class="tb-n">${t.n||'—'}</div>
-    <div class="tb-u">${t.u}</div>
-    <div class="tb-l">${t.l}</div>
+    <div class="tb-n">${t.n||'—'}</div><div class="tb-u">días</div><div class="tb-l">${t.l}</div>
   </div>`).join('');
 }
 function splitBar(a,b,la,lb){
-  const tot=a+b||1, pA=Math.round(a/tot*100);
+  const tot=a+b||1,pA=Math.round(a/tot*100);
   return `<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:600;margin-bottom:6px">
     <span style="color:#1D4ED8">${la}: ${a}</span><span style="color:#7C3AED">${lb}: ${b}</span>
   </div>
   <div style="display:flex;height:8px;border-radius:99px;overflow:hidden;margin-bottom:4px">
-    <div style="width:${pA}%;background:#1D4ED8"></div>
-    <div style="flex:1;background:#7C3AED"></div>
+    <div style="width:${pA}%;background:#1D4ED8"></div><div style="flex:1;background:#7C3AED"></div>
   </div>
-  <div style="display:flex;justify-content:space-between;font-size:11px;color:#64748B">
-    <span>${pA}%</span><span>${100-pA}%</span>
-  </div>`;
+  <div style="display:flex;justify-content:space-between;font-size:11px;color:#64748B"><span>${pA}%</span><span>${100-pA}%</span></div>`;
 }
 function funnelRows(steps,mx){
   return steps.map(s=>`<div class="funnel-step">
@@ -685,52 +586,42 @@ function funnelRows(steps,mx){
     <span class="fs-v" style="color:${s.c}">${s.v}</span>
   </div>`).join('');
 }
-
-// ─── CHARTS ───────────────────────────────────────────────────────────────────
-function mkBar(id,label,data,color,targets){
-  if(charts[id]) charts[id].destroy();
+function mkBar(id,data,col,targets){
+  if(charts[id])charts[id].destroy();
   charts[id]=new Chart(document.getElementById(id),{
     type:'bar',
-    data:{
-      labels:MONTHS,
-      datasets:[
-        {label,data,backgroundColor:color+'99',borderColor:color,borderWidth:1,borderRadius:3},
-        {label:'Objetivo',data:targets,type:'line',borderColor:'#CBD5E1',borderWidth:1.5,pointRadius:0,fill:false,borderDash:[4,4]}
-      ]
-    },
+    data:{labels:MONTHS,datasets:[
+      {label:'Real',data,backgroundColor:col+'99',borderColor:col,borderWidth:1,borderRadius:3},
+      {label:'Objetivo',data:targets,type:'line',borderColor:'#CBD5E1',borderWidth:1.5,pointRadius:0,fill:false,borderDash:[4,4]},
+    ]},
     options:{responsive:true,maintainAspectRatio:false,
       plugins:{legend:{display:false}},
-      scales:{x:{grid:{display:false},ticks:{font:{size:10},maxRotation:0}},
-              y:{beginAtZero:true,ticks:{font:{size:10}},grid:{color:'#F8FAFC'}}}}
+      scales:{x:{grid:{display:false},ticks:{font:{size:10},maxRotation:0}},y:{beginAtZero:true,ticks:{font:{size:10}},grid:{color:'#F8FAFC'}}}}
   });
 }
 function mkLine(id,labels,datasets){
-  if(charts[id]) charts[id].destroy();
+  if(charts[id])charts[id].destroy();
   charts[id]=new Chart(document.getElementById(id),{
     type:'line',
     data:{labels,datasets:datasets.map(s=>({label:s.l,data:s.d,borderColor:s.c,backgroundColor:s.c+'22',tension:.3,pointRadius:4,fill:true,borderWidth:2}))},
     options:{responsive:true,maintainAspectRatio:false,
       plugins:{legend:{position:'bottom',labels:{font:{size:10},boxWidth:12}}},
-      scales:{x:{grid:{display:false},ticks:{font:{size:10}}},
-              y:{beginAtZero:true,max:120,ticks:{font:{size:10},callback:v=>v+'%'},grid:{color:'#F8FAFC'}}}}
+      scales:{x:{grid:{display:false},ticks:{font:{size:10}}},y:{beginAtZero:true,max:120,ticks:{font:{size:10},callback:v=>v+'%'},grid:{color:'#F8FAFC'}}}}
   });
 }
-
-// ─── TABS & WEEKS ─────────────────────────────────────────────────────────────
-function showTab(id){
+function showTab(id,el){
   document.querySelectorAll('.tsec').forEach(s=>s.classList.remove('on'));
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
   document.getElementById('tsec-'+id).classList.add('on');
-  event.target.classList.add('on');
+  el.classList.add('on');
 }
 function buildWeekButtons(){
   const row=document.getElementById('week-row');
   row.innerHTML='<span class="pb-lbl">Semana</span>';
   Object.entries(WEEK_RANGES).forEach(([wk,r])=>{
     const btn=document.createElement('button');
-    btn.className='pp';btn.id='p-'+wk;btn.textContent=wk;btn.title=r.label;
-    btn.onclick=()=>setPeriod(wk);
-    row.appendChild(btn);
+    btn.className='pp';btn.id='p-'+wk;btn.textContent=wk;btn.title=r.start+' → '+r.end;
+    btn.onclick=()=>setPeriod(wk);row.appendChild(btn);
   });
 }
 document.getElementById('tok').addEventListener('keydown',e=>{if(e.key==='Enter')go();});
