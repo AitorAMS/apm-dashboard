@@ -308,18 +308,12 @@ async function api(path){
   if(!r.ok)throw new Error('HTTP '+r.status+' → '+path);
   return r.json();
 }
-async function fetchPipe(id,max=50){
-  let all=[],start=0;
-  for(let i=0;i<max;i++){
-    const d=await api(`/pipelines/${id}/deals?limit=500&start=${start}&status=all_not_deleted`);
-    const b=d.data||[];
-    all=all.concat(b);
-    const more=d.additional_data?.pagination?.more_items_in_collection;
-    console.log(`Pipeline ${id} página ${i+1}: ${b.length} deals, más: ${more}`);
-    if(!more||b.length===0)break;
-    start+=500;
-  }
-  return all;
+async function fetchPipe(id){
+  // Usa la ruta /all del proxy que pagina automáticamente en el servidor
+  const d=await api(`/pipelines/${id}/deals/all`);
+  const deals=d.data||[];
+  console.log(`Pipeline ${id}: ${deals.length} deals cargados`);
+  return deals;
 }
 async function buildOpts(){
   const d=await api('/dealFields?limit=500');
