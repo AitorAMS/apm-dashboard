@@ -345,6 +345,7 @@ async function go(){
     prog(92,'Construyendo dashboard…');
     const all=results.flat();
     AD={all};
+    window._allDeals=all; // debug
     buildWeekButtons();
     render();
     prog(100,'Listo');
