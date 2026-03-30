@@ -259,20 +259,60 @@ async function fetchAllByStatus(id,status){
   return all;
 }
 
-async function fetchPipe(id){
+async function fetchAllByStatus(id,status){
   let all=[],start=0,page=0;
   while(true){
     page++;
-    const d=await apiGet(`/pipelines/${id}/deals?limit=500&start=${start}&status=all_not_deleted`);
+    const d=await apiGet(`/pipelines/${id}/deals?limit=500&start=${start}&status=${status}`);
     const b=d.data||[];
     all=all.concat(b);
     const more=d.additional_data?.pagination?.more_items_in_collection;
-    console.log(`Pipeline ${id} p${page}: ${b.length} deals, más: ${more}`);
     if(!more||b.length===0)break;
     start+=b.length;
     if(page>50)break;
   }
-  console.log(`Pipeline ${id} TOTAL: ${all.length}`);
+  return all;
+}
+
+async function fetchAllByStages(stages,status){
+  let all=[];
+  for(const sid of stages){
+    let start=0,page=0;
+    while(true){
+      page++;
+      const d=await apiGet(`/deals?limit=500&start=${start}&stage_id=${sid}&status=${status}`);
+      const b=d.data||[];
+      all=all.concat(b);
+      const more=d.additional_data?.pagination?.more_items_in_collection;
+      if(!more||b.length===0)break;
+      start+=b.length;
+      if(page>50)break;
+    }
+  }
+  return all;
+}
+
+async function fetchPipe(id){
+  // Para pipeline Survey (2) cargamos también por stages para coger todos los lost
+  const SURVEY_STAGES=[116,62,46,6,33,154,70,32,9];
+  let open=[], lost=[];
+  if(id===2){
+    [open, lost]=await Promise.all([
+      fetchAllByStatus(id,'open'),
+      fetchAllByStages(SURVEY_STAGES,'lost'),
+    ]);
+  } else {
+    [open, lost]=await Promise.all([
+      fetchAllByStatus(id,'open'),
+      fetchAllByStatus(id,'lost'),
+    ]);
+  }
+  const seen=new Set();
+  const all=[...open,...lost].filter(d=>{
+    if(seen.has(d.id))return false;
+    seen.add(d.id);return true;
+  });
+  console.log(`Pipeline ${id}: ${open.length} open + ${lost.length} lost = ${all.length} únicos`);
   return all;
 }
 
