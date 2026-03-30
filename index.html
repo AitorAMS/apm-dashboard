@@ -259,13 +259,12 @@ async function fetchAllByStatus(id, status){
   return all;
 }
 async function fetchPipe(id){
-  const [open, lost, won] = await Promise.all([
+  const [open, lost] = await Promise.all([
     fetchAllByStatus(id,'open'),
     fetchAllByStatus(id,'lost'),
-    fetchAllByStatus(id,'won'),
   ]);
-  const all=[...open,...lost,...won];
-  console.log(`Pipeline ${id}: ${open.length} open + ${lost.length} lost + ${won.length} won = ${all.length} total`);
+  const all=[...open,...lost];
+  console.log(`Pipeline ${id}: ${open.length} open + ${lost.length} lost = ${all.length} total`);
   return all;
 }
 
