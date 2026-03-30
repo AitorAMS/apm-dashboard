@@ -32,82 +32,63 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .week-row{display:flex;gap:4px;flex-wrap:wrap;align-items:center;padding:4px 0;width:100%}
 .main{padding:20px 24px;max-width:1440px;margin:0 auto;display:none}
 .err{background:#FEF2F2;border:1px solid #FCA5A5;border-radius:10px;padding:12px 16px;color:#991B1B;font-weight:600;font-size:13px;margin-bottom:16px;display:none}
-
-/* PIPELINE VISUAL */
 .pipeline-visual{display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin-bottom:24px;background:white;border-radius:16px;border:1px solid #E2E8F0;overflow:hidden}
 .pv-step{padding:20px 16px;text-align:center;position:relative;border-right:1px solid #F1F5F9}
 .pv-step:last-child{border-right:none}
 .pv-step::after{content:'›';position:absolute;right:-8px;top:50%;transform:translateY(-50%);font-size:20px;color:#CBD5E1;z-index:1}
 .pv-step:last-child::after{display:none}
-.pv-icon{width:40px;height:40px;border-radius:50%;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;font-size:16px}
 .pv-num{font-size:28px;font-weight:700;letter-spacing:-.5px;line-height:1;margin-bottom:2px}
 .pv-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#94A3B8;margin-bottom:4px}
 .pv-sub{font-size:11px;color:#64748B}
-.pv-bar{height:3px;border-radius:99px;margin-top:8px}
-
-/* SECTION TABS */
+.pv-ach{font-size:11px;font-weight:700;margin-top:4px}
+.pv-bar-wrap{height:4px;background:#E2E8F0;border-radius:99px;margin-top:6px;overflow:hidden}
+.pv-bar-fill{height:100%;border-radius:99px;transition:width .6s}
 .sec-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:#94A3B8;margin:20px 0 12px}
 .area-tabs{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap}
 .atab{padding:8px 18px;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;background:white;color:#64748B;border:1px solid #E2E8F0;transition:all .1s}
 .atab:hover{border-color:#94A3B8}
-.atab.on{color:white;border-color:transparent}
 .tsec{display:none}.tsec.on{display:block}
-
-/* CARDS */
 .section-card{background:white;border-radius:14px;border:1px solid #E2E8F0;padding:20px;margin-bottom:16px}
 .sc-head{font-size:13px;font-weight:700;color:#0F172A;margin-bottom:16px;display:flex;align-items:center;gap:8px}
 .sc-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
 .three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:16px}
-.four-col{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:16px}
-
-/* METRIC TABLE */
 .mtable{width:100%;border-collapse:collapse}
 .mtable td{padding:7px 8px;font-size:13px;border-bottom:1px solid #F8FAFC;vertical-align:middle}
 .mtable tr:last-child td{border-bottom:none}
 .mtable tr:hover td{background:#FAFAFA}
 .ml{color:#374151;font-weight:500}
+.ml-sub{color:#94A3B8;font-weight:400;font-size:12px;padding-left:12px}
 .mv{font-weight:700;color:#0F172A;text-align:right}
 .mv.red{color:#EF4444}.mv.grn{color:#059669}.mv.amb{color:#D97706}
-
-/* KPI MINI CARDS */
-.mini-kpi{background:#F8FAFC;border-radius:10px;padding:14px;text-align:center}
-.mk-num{font-size:28px;font-weight:700;letter-spacing:-.5px;line-height:1;margin-bottom:2px}
-.mk-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#94A3B8}
-
-/* TIME BOXES */
-.time-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:8px}
-.tbox{background:#F8FAFC;border-radius:8px;padding:12px;text-align:center}
+.time-section{margin-bottom:16px}
+.time-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#94A3B8;margin-bottom:8px}
+.tbox{background:#F8FAFC;border-radius:8px;padding:12px;text-align:center;margin-bottom:8px}
 .tb-n{font-size:22px;font-weight:700;color:#0F172A}
 .tb-u{font-size:10px;color:#94A3B8}
 .tb-l{font-size:10px;font-weight:600;color:#64748B;margin-top:2px;line-height:1.3}
-.tb-warn{font-size:10px;color:#D97706;margin-top:2px}
-
-/* FUNNEL BARS */
+.tb-warn{font-size:10px;color:#D97706;margin-top:3px}
+.week-breakdown{background:#F8FAFC;border-radius:8px;padding:10px 12px}
+.wb-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#94A3B8;margin-bottom:8px}
+.wb-row{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.wb-lbl{font-size:11px;color:#64748B;width:56px;flex-shrink:0}
+.wb-bar-wrap{flex:1;height:5px;background:#E2E8F0;border-radius:99px;overflow:hidden}
+.wb-bar{height:100%;border-radius:99px}
+.wb-val{font-size:11px;font-weight:700;min-width:32px;text-align:right;color:#374151}
 .funnel-step{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-.fs-lbl{font-size:12px;font-weight:600;color:#374151;width:180px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.fs-bw{flex:1;height:10px;background:#F1F5F9;border-radius:99px;overflow:hidden}
+.fs-lbl{font-size:12px;font-weight:600;color:#374151;width:150px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fs-bw{flex:1;height:9px;background:#F1F5F9;border-radius:99px;overflow:hidden}
 .fs-bf{height:100%;border-radius:99px}
-.fs-v{font-size:12px;font-weight:700;min-width:50px;text-align:right;white-space:nowrap}
-
-/* SPLIT BAR */
-.split-wrap{margin-top:8px}
-.split-bar{display:flex;height:10px;border-radius:99px;overflow:hidden;margin:6px 0}
-.split-labels{display:flex;justify-content:space-between;font-size:11px;color:#64748B}
-
-/* PROVIDER LIST */
+.fs-v{font-size:12px;font-weight:700;min-width:36px;text-align:right}
 .prov-row{display:flex;align-items:center;gap:8px;margin-bottom:6px}
-.prov-name{font-size:12px;font-weight:600;color:#374151;width:140px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.prov-name{font-size:12px;font-weight:600;color:#374151;width:130px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .prov-bw{flex:1;height:7px;background:#F1F5F9;border-radius:99px;overflow:hidden}
 .prov-bf{height:100%;border-radius:99px}
-.prov-n{font-size:12px;font-weight:700;min-width:30px;text-align:right;color:#64748B}
-
-/* CHART */
+.prov-n{font-size:12px;font-weight:700;min-width:28px;text-align:right;color:#64748B}
 .chart-wrap{position:relative;height:160px;margin-top:8px}
-
 @media(max-width:1100px){.pipeline-visual{grid-template-columns:repeat(3,1fr)}.pv-step::after{display:none}}
-@media(max-width:900px){.two-col,.three-col,.four-col{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.pipeline-visual{grid-template-columns:repeat(2,1fr)}.two-col,.three-col,.four-col{grid-template-columns:1fr}}
+@media(max-width:900px){.two-col,.three-col{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.pipeline-visual{grid-template-columns:repeat(2,1fr)}.two-col,.three-col{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -150,19 +131,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 
 <div class="main" id="main">
   <div id="err" class="err"></div>
-
-  <!-- PIPELINE VISUAL -->
   <div class="sec-title">Flujo de red — visión global</div>
   <div class="pipeline-visual" id="pipeline-visual"></div>
-
-  <!-- AREA TABS -->
   <div class="sec-title">Detalle por área</div>
   <div class="area-tabs">
-    <div class="atab on" style="background:#7C3AED" onclick="showTab('sv',this)">Survey</div>
-    <div class="atab" onclick="showTab('ap',this)">Aprobaciones</div>
-    <div class="atab" onclick="showTab('eg',this)">E&amp;G</div>
-    <div class="atab" onclick="showTab('in',this)">Instalaciones</div>
-    <div class="atab" onclick="showTab('ex',this)">Extensiones</div>
+    <div class="atab on" style="background:#7C3AED;color:white;border-color:transparent" onclick="showTab('sv',this,'#7C3AED')">Survey</div>
+    <div class="atab" onclick="showTab('ap',this,'#0EA5E9')">Approvals</div>
+    <div class="atab" onclick="showTab('eg',this,'#D97706')">E&amp;G</div>
+    <div class="atab" onclick="showTab('in',this,'#059669')">Instalaciones</div>
+    <div class="atab" onclick="showTab('ex',this,'#6366F1')">Extensiones</div>
   </div>
 
   <!-- SURVEY -->
@@ -174,7 +151,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       </div>
       <div class="section-card">
         <div class="sc-head"><span class="sc-dot" style="background:#7C3AED"></span>Tiempos medios</div>
-        <div class="time-grid" id="sv-times"></div>
+        <div id="sv-times"></div>
         <div style="margin-top:16px">
           <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#94A3B8;margin-bottom:8px">InPost vs Externos</div>
           <div id="sv-split"></div>
@@ -187,16 +164,16 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     </div>
   </div>
 
-  <!-- APROBACIONES -->
+  <!-- APPROVALS -->
   <div class="tsec" id="tsec-ap">
     <div class="three-col">
       <div class="section-card">
-        <div class="sc-head"><span class="sc-dot" style="background:#0EA5E9"></span>Aprobaciones por tipo</div>
+        <div class="sc-head"><span class="sc-dot" style="background:#0EA5E9"></span>Approvals por tipo</div>
         <table class="mtable"><tbody id="ap-metrics"></tbody></table>
       </div>
       <div class="section-card">
         <div class="sc-head"><span class="sc-dot" style="background:#0EA5E9"></span>Tiempos medios</div>
-        <div class="time-grid" id="ap-times"></div>
+        <div id="ap-times"></div>
       </div>
       <div class="section-card">
         <div class="sc-head"><span class="sc-dot" style="background:#0EA5E9"></span>Chains vs Ind+Franchise</div>
@@ -214,7 +191,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       </div>
       <div class="section-card">
         <div class="sc-head"><span class="sc-dot" style="background:#D97706"></span>Tiempos medios</div>
-        <div class="time-grid" id="eg-times"></div>
+        <div id="eg-times"></div>
       </div>
       <div class="section-card">
         <div class="sc-head"><span class="sc-dot" style="background:#D97706"></span>Proveedores E&amp;G</div>
@@ -231,12 +208,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
         <table class="mtable"><tbody id="in-metrics"></tbody></table>
       </div>
       <div class="section-card">
-        <div class="sc-head"><span class="sc-dot" style="background:#059669"></span>Por tipo de local</div>
+        <div class="sc-head"><span class="sc-dot" style="background:#059669"></span>Desglose</div>
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#94A3B8;margin-bottom:8px">Por tipo de local</div>
         <div id="in-type"></div>
-        <div style="margin-top:16px">
-          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#94A3B8;margin-bottom:8px">Por tamaño de locker</div>
-          <div id="in-size"></div>
-        </div>
+        <div style="margin-top:14px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#94A3B8;margin-bottom:8px">Indoor vs Outdoor</div>
+        <div id="in-indoor"></div>
+        <div style="margin-top:14px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#94A3B8;margin-bottom:8px">Por tamaño de locker</div>
+        <div id="in-size"></div>
       </div>
       <div class="section-card">
         <div class="sc-head"><span class="sc-dot" style="background:#059669"></span>Proveedores Instalación</div>
@@ -263,11 +241,24 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
 const MONTHS=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
-const TARGETS={
-  survey:[300,552,600,700,650,700,600,250,600,600,650,400],
-  eg:[200,300,350,450,450,550,400,200,500,500,500,250],
-  install:[140,181,230,343,385,528,405,255,485,446,457,345]
+
+// Targets mensuales
+const TARGETS_M={
+  survey: [300,550,600,700,650,700,600,250,600,600,650,400],
+  approval:[255,360,480,550,550,575,500,200,500,550,550,300],
+  eg:      [250,300,350,450,450,550,400,200,500,500,500,250],
+  install: [140,181,230,343,385,528,405,255,485,446,457,345]
 };
+
+// Targets semanales — ISO W1..W53
+// Jan W1-W5, Feb W6-W9, Mar W10-W13, Apr W14-W17+W18
+const TARGETS_W={
+  survey: {W1:60,W2:60,W3:60,W4:60,W5:60,W6:138,W7:138,W8:138,W9:138,W10:150,W11:150,W12:150,W13:150,W14:100,W15:150,W16:150,W17:150,W18:150},
+  approval:{W1:51,W2:51,W3:51,W4:51,W5:51,W6:80,W7:80,W8:100,W9:100,W10:120,W11:120,W12:120,W13:120,W14:75,W15:100,W16:125,W17:125,W18:125},
+  eg:      {W1:50,W2:50,W3:50,W4:50,W5:50,W6:75,W7:75,W8:75,W9:75,W10:75,W11:100,W12:100,W13:75,W14:50,W15:75,W16:100,W17:100,W18:125},
+  install: {W1:0,W2:10,W3:35,W4:42,W5:53,W6:36,W7:47,W8:49,W9:49,W10:57,W11:63,W12:62,W13:48,W14:48,W15:63,W16:74,W17:79,W18:79}
+};
+
 const APM_IDS=[1,2,3,4,8,9,13,17];
 const PIPELINE_STAGES={
   2:[116,62,46,6,33,154,70,32,9],
@@ -300,12 +291,13 @@ const F={
   land:  '0cc4dfd4e72d45a5f0be9b48743a936cfe6c6a2b',
   apPart:'5dad53f6ffced67539def909f4329c14f37783b1',
   apmSize:'2ddcd354da2bdf692cdbb531c10d410b248cc852',
+  indoor:'b49c4d80d008ba209738f3bee0ed1fe548c5a4b4',
+  exDone:'4a4e30eb9d47fc061dea264544ccd5b6b86c08dd',
 };
 let tok='',PROXY='',OPT={},AD={},charts={},period='03';
 
 const pct=(a,b)=>b>0?Math.round(a/b*100):0;
 const prog=(p,t)=>{document.getElementById('lf').style.width=p+'%';document.getElementById('ltx').textContent=t};
-const color=(v,g=80,w=55)=>v>=g?'grn':v>=w?'amb':'red';
 
 const WEEK_RANGES=(()=>{
   const map={},w1=new Date('2025-12-29'),today=new Date();
@@ -331,14 +323,17 @@ function inPrd(d,f){
 function byM(arr,f,m){
   return arr.filter(d=>{const v=d[f];if(!v)return false;return String(v).startsWith('2026-'+String(m+1).padStart(2,'0'));}).length;
 }
+function byW(arr,f,wk){
+  const r=WEEK_RANGES[wk];if(!r)return 0;
+  return arr.filter(d=>{const v=d[f];if(!v)return false;const s=String(v).slice(0,10);return s>=r.start&&s<=r.end;}).length;
+}
 function cntP(arr,f){return arr.filter(d=>inPrd(d,f)).length;}
 function avgDays(arr,f1,f2,excludeOutliers=false){
   let vs=arr.filter(d=>d[f1]&&d[f2]).map(d=>(new Date(d[f2])-new Date(d[f1]))/86400000).filter(x=>x>=0&&x<500);
   if(excludeOutliers&&vs.length>4){
     const sorted=[...vs].sort((a,b)=>a-b);
     const q1=sorted[Math.floor(sorted.length*.25)],q3=sorted[Math.floor(sorted.length*.75)];
-    const iqr=q3-q1;
-    vs=vs.filter(x=>x>=q1-1.5*iqr&&x<=q3+1.5*iqr);
+    const iqr=q3-q1;vs=vs.filter(x=>x>=q1-1.5*iqr&&x<=q3+1.5*iqr);
   }
   return vs.length?(vs.reduce((a,b)=>a+b,0)/vs.length).toFixed(1):null;
 }
@@ -347,17 +342,24 @@ function countOutliers(arr,f1,f2){
   if(vs.length<=4)return 0;
   const sorted=[...vs].sort((a,b)=>a-b);
   const q1=sorted[Math.floor(sorted.length*.25)],q3=sorted[Math.floor(sorted.length*.75)];
-  const iqr=q3-q1;
-  return vs.filter(x=>x<q1-1.5*iqr||x>q3+1.5*iqr).length;
+  const iqr=q3-q1;return vs.filter(x=>x<q1-1.5*iqr||x>q3+1.5*iqr).length;
 }
 const resolveEnum=v=>OPT[v]||OPT[String(v)]||String(v||'');
-function providerMap(arr,f,period_f){
+function provMap(arr,f,pf){
   const map={};
-  arr.filter(d=>inPrd(d,period_f)&&d[f]).forEach(d=>{
-    const n=resolveEnum(d[f])||'Sin proveedor';
-    map[n]=(map[n]||0)+1;
-  });
+  arr.filter(d=>inPrd(d,pf)&&d[f]).forEach(d=>{const n=resolveEnum(d[f])||'Sin proveedor';map[n]=(map[n]||0)+1;});
   return map;
+}
+function getTarget(key){
+  const mIdx={'01':0,'02':1,'03':2,'04':3,'05':4,'06':5,'07':6,'08':7,'09':8,'10':9,'11':10,'12':11};
+  const mi=mIdx[period]??null;
+  if(mi!==null) return TARGETS_M[key]?.[mi]??0;
+  if(period.startsWith('W')) return TARGETS_W[key]?.[period]??0;
+  if(period.startsWith('q')){
+    const qm={q1:[0,1,2],q2:[3,4,5],q3:[6,7,8],q4:[9,10,11]};
+    return(qm[period]||[]).reduce((s,i)=>s+(TARGETS_M[key]?.[i]??0),0);
+  }
+  return (TARGETS_M[key]||[]).reduce((a,b)=>a+b,0);
 }
 
 async function apiGet(path){
@@ -372,8 +374,7 @@ async function fetchAllByStatus(id,status){
     const d=await apiGet(`/pipelines/${id}/deals?limit=500&start=${start}&status=${status}`);
     const b=d.data||[];all=all.concat(b);
     const more=d.additional_data?.pagination?.more_items_in_collection;
-    if(!more||b.length===0)break;
-    start+=b.length;if(page>50)break;
+    if(!more||b.length===0)break;start+=b.length;if(page>50)break;
   }
   return all;
 }
@@ -386,8 +387,7 @@ async function fetchAllByStages(stages,status){
       const d=await apiGet(`/deals?limit=500&start=${start}&stage_id=${sid}&status=${status}`);
       const b=d.data||[];all=all.concat(b);
       const more=d.additional_data?.pagination?.more_items_in_collection;
-      if(!more||b.length===0)break;
-      start+=b.length;if(page>50)break;
+      if(!more||b.length===0)break;start+=b.length;if(page>50)break;
     }
   }
   return all;
@@ -452,7 +452,6 @@ function setPeriod(p){
 function render(){
   const{all}=AD;
 
-  // Conteos principales
   const rdySv=cntP(all,F.rdySv);
   const svDone=cntP(all,F.svDone);
   const svReq=cntP(all,F.svReq);
@@ -467,6 +466,10 @@ function render(){
   const inSch=cntP(all,F.inSch);
   const inRmv=cntP(all,F.inRmv);
   const apPart=cntP(all,F.apPart);
+  const exDone=cntP(all,F.exDone);
+
+  const tSv=getTarget('survey'),tAp=getTarget('approval'),tEg=getTarget('eg'),tIn=getTarget('install');
+  const svAch=pct(svDone,tSv),apAch=pct(apPart,tAp),egAch=pct(egDone,tEg),inAch=pct(inDep,tIn);
 
   // Aprobaciones por tipo
   const apChain=all.filter(d=>inPrd(d,F.apPart)&&resolveEnum(d[F.land]).toLowerCase().includes('chain')).length;
@@ -476,131 +479,167 @@ function render(){
   const svLost=all.filter(d=>d.status==='lost'&&d[F.svDone]&&inPrd(d,F.svDone)).length;
   const svLostPct=pct(svLost,svDone);
 
-  // InPost vs externos survey
+  // InPost vs externos
   const svInt=all.filter(d=>inPrd(d,F.svDone)&&d[F.svProv]&&resolveEnum(d[F.svProv]).toLowerCase().includes('inpost')).length;
   const svExt=svDone-svInt;
 
-  // Instalaciones por tipo
+  // Instalaciones desglose
   const inChain=all.filter(d=>inPrd(d,F.inDep)&&resolveEnum(d[F.land]).toLowerCase().includes('chain')).length;
   const inIndFra=inDep-inChain;
+  const inIndoor=all.filter(d=>inPrd(d,F.inDep)&&resolveEnum(d[F.indoor]).toLowerCase().includes('indoor')).length;
+  const inOutdoor=inDep-inIndoor;
 
   // Locker sizes
   const sizeMap={};
   all.filter(d=>inPrd(d,F.inDep)&&d[F.apmSize]).forEach(d=>{
-    const s=resolveEnum(d[F.apmSize])||'Otro';
-    sizeMap[s]=(sizeMap[s]||0)+1;
+    const s=resolveEnum(d[F.apmSize])||'Otro';sizeMap[s]=(sizeMap[s]||0)+1;
   });
-
-  // Extensiones (pipeline 17)
-  const exDep=all.filter(d=>d.pipeline_id===17&&inPrd(d,F.inDep)).length;
-  const exArr=MONTHS.map((_,m)=>all.filter(d=>d.pipeline_id===17&&byM([d],F.inDep,m)>0).length);
 
   // Tiempos
   const tSvRS=avgDays(all,F.svReq,F.svSch);
   const tEgRS=avgDays(all,F.egReq,F.egSch);
-  const tEgIn=avgDays(all,F.egDone,F.inDone);
-  const tEgInClean=avgDays(all,F.egDone,F.inDone,true);
-  const outliers=countOutliers(all,F.egDone,F.inDone);
+  const tEgIn=avgDays(all,F.egDone,F.inDone,true);
+  const egInOut=countOutliers(all,F.egDone,F.inDone);
   const tApSv=avgDays(all,F.svDone,F.apPart);
   const tApIn=avgDays(all,F.apPart,F.inDone,true);
-  const tApInOut=countOutliers(all,F.apPart,F.inDone);
+  const apInOut=countOutliers(all,F.apPart,F.inDone);
 
-  // Periodo label
-  const pL={'01':'Enero','02':'Febrero','03':'Marzo','04':'Abril','05':'Mayo','06':'Junio','07':'Julio','08':'Agosto','09':'Septiembre','10':'Octubre','11':'Noviembre','12':'Diciembre',q1:'Q1',q2:'Q2',q3:'Q3',q4:'Q4',ytd:'Año completo'};
+  // Weekly breakdown para tiempos (últimas 4 semanas disponibles)
+  const recentWeeks=Object.keys(WEEK_RANGES).slice(-4);
 
-  // ── PIPELINE VISUAL ──────────────────────────────────────────────────
-  const steps=[
-    {label:'New Ready',num:rdySv,color:'#64748B',bg:'#F1F5F9',sub:'Para survey'},
-    {label:'Survey',num:svDone,color:'#7C3AED',bg:'#F5F3FF',sub:`${pct(svDone,rdySv)}% conv.`},
-    {label:'Aprobaciones',num:apPart,color:'#0EA5E9',bg:'#F0F9FF',sub:`${pct(apPart,svDone)}% conv.`},
-    {label:'E&G',num:egDone,color:'#D97706',bg:'#FFFBEB',sub:`${pct(egDone,apPart)}% conv.`},
-    {label:'Installation',num:inDep,color:'#059669',bg:'#F0FDF4',sub:`${pct(inDep,egDone)}% conv.`},
-    {label:'Live',num:inLive,color:'#15803D',bg:'#DCFCE7',sub:`${pct(inLive,inDep)}% conv.`},
+  // Extensiones mensuales
+  const exArr=MONTHS.map((_,m)=>byM(all,F.exDone,m));
+
+  // Pipeline visual
+  const pvSteps=[
+    {label:'New Ready for Survey',num:rdySv,target:tSv,color:'#64748B',bg:'#F8FAFC'},
+    {label:'Survey',num:svDone,target:tSv,ach:svAch,color:'#7C3AED',bg:'#F5F3FF'},
+    {label:'Approval',num:apPart,target:tAp,ach:apAch,color:'#0EA5E9',bg:'#F0F9FF'},
+    {label:'E&G',num:egDone,target:tEg,ach:egAch,color:'#D97706',bg:'#FFFBEB'},
+    {label:'Installation',num:inDep,target:tIn,ach:inAch,color:'#059669',bg:'#F0FDF4'},
+    {label:'Live',num:inLive,target:0,color:'#15803D',bg:'#DCFCE7'},
   ];
-  document.getElementById('pipeline-visual').innerHTML=steps.map(s=>`
-    <div class="pv-step" style="background:${s.bg}">
+  document.getElementById('pipeline-visual').innerHTML=pvSteps.map(s=>{
+    const achColor=!s.ach?'#94A3B8':s.ach>=80?'#059669':s.ach>=55?'#D97706':'#EF4444';
+    return `<div class="pv-step" style="background:${s.bg}">
       <div class="pv-label">${s.label}</div>
       <div class="pv-num" style="color:${s.color}">${s.num.toLocaleString()}</div>
-      <div class="pv-sub">${s.sub}</div>
-      <div class="pv-bar" style="background:${s.color}33"><div style="height:100%;width:100%;background:${s.color};border-radius:99px"></div></div>
-    </div>`).join('');
+      ${s.target?`<div class="pv-ach" style="color:${achColor}">${s.ach??'—'}% obj. (${s.target})</div>`:'<div class="pv-sub">Activas en red</div>'}
+      <div class="pv-bar-wrap"><div class="pv-bar-fill" style="width:${Math.min(s.ach??0,100)}%;background:${s.color}"></div></div>
+    </div>`;
+  }).join('');
 
-  // ── SURVEY ──────────────────────────────────────────────────────────
+  // ── SURVEY ──────────────────────────────────────
   document.getElementById('sv-metrics').innerHTML=rows([
     {l:'Completados',v:svDone},
-    {l:'Solicitados (externos)',v:svReq},
+    {l:'↳ Externos',v:svExt,cls:'ml-sub'},
+    {l:'↳ InPost (internos)',v:svInt,cls:'ml-sub'},
+    {l:'Solicitados',v:svReq},
     {l:'Programados',v:svSch},
-    {l:'Externos',v:svExt},
-    {l:'InPost (internos)',v:svInt},
-    {l:'Sin posibilidad de avanzar',v:svLost,c:svLostPct>40?'red':svLostPct>25?'amb':''},
-    {l:'% Perdidos',v:svLostPct+'%',c:svLostPct>40?'red':svLostPct>25?'amb':''},
+    {l:'Lost',v:svLost,c:svLostPct>40?'red':svLostPct>25?'amb':''},
+    {l:'% Lost',v:svLostPct+'%',c:svLostPct>40?'red':svLostPct>25?'amb':''},
+    {l:'Objetivo',v:tSv},
+    {l:'% Consecución',v:svAch+'%',c:svAch>=80?'grn':svAch>=55?'amb':'red'},
   ]);
-  document.getElementById('sv-times').innerHTML=timeBox([
-    {n:tSvRS,l:'Solicitado → Programado',u:'días'},
-  ]);
+  document.getElementById('sv-times').innerHTML=timeSectionWithWeeks('Solicitado → Programado',tSvRS,'días',all,F.svReq,F.svSch,recentWeeks,'#7C3AED');
   document.getElementById('sv-split').innerHTML=splitBar(svInt,svExt,'InPost','Externos','#1D4ED8','#7C3AED');
-  document.getElementById('sv-prov').innerHTML=provBars(providerMap(all,F.svProv,F.svDone),'#7C3AED');
+  document.getElementById('sv-prov').innerHTML=provBars(provMap(all,F.svProv,F.svDone),'#7C3AED');
 
-  // ── APROBACIONES ────────────────────────────────────────────────────
+  // ── APPROVALS ──────────────────────────────────
   document.getElementById('ap-metrics').innerHTML=rows([
     {l:'Total aprobados por partner',v:apPart},
     {l:'Chains',v:apChain},
     {l:'Ind + Franchise',v:apIndFra},
+    {l:'Objetivo',v:tAp},
+    {l:'% Consecución',v:apAch+'%',c:apAch>=80?'grn':apAch>=55?'amb':'red'},
   ]);
-  document.getElementById('ap-times').innerHTML=timeBox([
-    {n:tApSv,l:'Survey completado → Aprobación',u:'días'},
-    {n:tApIn,l:'Aprobación → Instalación',u:'días',warn:tApInOut>0?`${tApInOut} anomalías excluidas`:''},
-  ]);
+  document.getElementById('ap-times').innerHTML=
+    timeSectionWithWeeks('Survey completado → Approval',tApSv,'días',all,F.svDone,F.apPart,recentWeeks,'#0EA5E9')+
+    `<div style="margin-top:12px">`+
+    timeSectionWithWeeks('Approval → Instalación',tApIn,'días',all,F.apPart,F.inDone,recentWeeks,'#0EA5E9',apInOut)+
+    `</div>`;
   document.getElementById('ap-split').innerHTML=splitBar(apChain,apIndFra,'Chains','Ind+Fra','#1D4ED8','#7C3AED');
 
-  // ── E&G ─────────────────────────────────────────────────────────────
+  // ── E&G ────────────────────────────────────────
   document.getElementById('eg-metrics').innerHTML=rows([
     {l:'Completados (RfD)',v:egDone},
     {l:'Solicitados',v:egReq},
     {l:'Programados',v:egSch},
-    {l:'Fallidos',v:egFail,c:egFail>10?'red':egFail>5?'amb':''},
-    {l:'% Fallidos',v:pct(egFail,egDone)+'%',c:pct(egFail,egDone)>10?'red':pct(egFail,egDone)>5?'amb':''},
+    {l:'Lost',v:egFail,c:pct(egFail,egDone)>10?'red':pct(egFail,egDone)>5?'amb':''},
+    {l:'% Lost',v:pct(egFail,egDone)+'%',c:pct(egFail,egDone)>10?'red':pct(egFail,egDone)>5?'amb':''},
+    {l:'Objetivo',v:tEg},
+    {l:'% Consecución',v:egAch+'%',c:egAch>=80?'grn':egAch>=55?'amb':'red'},
   ]);
-  document.getElementById('eg-times').innerHTML=timeBox([
-    {n:tEgRS,l:'Solicitado → Programado',u:'días'},
-    {n:tEgInClean,l:'E&G Completado → Instalación',u:'días',warn:outliers>0?`${outliers} anomalías excluidas`:''},
-  ]);
-  document.getElementById('eg-prov').innerHTML=provBars(providerMap(all,F.egProv,F.egDone),'#D97706');
+  document.getElementById('eg-times').innerHTML=
+    timeSectionWithWeeks('Solicitado → Programado',tEgRS,'días',all,F.egReq,F.egSch,recentWeeks,'#D97706')+
+    `<div style="margin-top:12px">`+
+    timeSectionWithWeeks('E&G completado → Instalación',tEgIn,'días',all,F.egDone,F.inDone,recentWeeks,'#D97706',egInOut)+
+    `</div>`;
+  document.getElementById('eg-prov').innerHTML=provBars(provMap(all,F.egProv,F.egDone),'#D97706');
 
-  // ── INSTALACIONES ───────────────────────────────────────────────────
+  // ── INSTALACIONES ──────────────────────────────
   document.getElementById('in-metrics').innerHTML=rows([
     {l:'Desplegadas',v:inDep},
     {l:'Completadas',v:inDone},
     {l:'Programadas',v:inSch},
-    {l:'APMs eliminados',v:inRmv,c:inRmv>5?'amb':''},
+    {l:'Removed',v:inRmv,c:inRmv>5?'amb':''},
+    {l:'Objetivo',v:tIn},
+    {l:'% Consecución',v:inAch+'%',c:inAch>=80?'grn':inAch>=55?'amb':'red'},
   ]);
   document.getElementById('in-type').innerHTML=funnelRows([
     {l:'Chains',v:inChain,c:'#1D4ED8'},
     {l:'Ind + Franchise',v:inIndFra,c:'#7C3AED'},
   ],inDep);
+  document.getElementById('in-indoor').innerHTML=funnelRows([
+    {l:'Indoor',v:inIndoor,c:'#059669'},
+    {l:'Outdoor',v:inOutdoor,c:'#0EA5E9'},
+  ],inDep);
   document.getElementById('in-size').innerHTML=funnelRows(
     Object.entries(sizeMap).sort((a,b)=>b[1]-a[1]).map(([l,v])=>({l,v,c:'#059669'})),
     Math.max(...Object.values(sizeMap),1)
   );
-  document.getElementById('in-prov').innerHTML=provBars(providerMap(all,F.inProv,F.inDep),'#059669');
+  document.getElementById('in-prov').innerHTML=provBars(provMap(all,F.inProv,F.inDep),'#059669');
 
-  // ── EXTENSIONES ─────────────────────────────────────────────────────
+  // ── EXTENSIONES ────────────────────────────────
   document.getElementById('ex-metrics').innerHTML=rows([
-    {l:'Extensiones desplegadas',v:exDep},
+    {l:'Extensiones completadas',v:exDone},
   ]);
   mkBar('ex-ch',exArr,'#6366F1',[]);
 }
 
-function rows(data){return data.map(r=>`<tr><td class="ml">${r.l}</td><td class="mv ${r.c||''}">${typeof r.v==='number'?r.v.toLocaleString():r.v}</td></tr>`).join('');}
+function rows(data){
+  return data.map(r=>`<tr>
+    <td class="${r.cls||'ml'}">${r.l}</td>
+    <td class="mv ${r.c||''}">${typeof r.v==='number'?r.v.toLocaleString():r.v}</td>
+  </tr>`).join('');
+}
 
-function timeBox(data){
-  return `<div class="time-grid">${data.map(t=>`
+function timeSectionWithWeeks(label,avg,unit,arr,f1,f2,weeks,color,outliers=0){
+  const weekRows=weeks.map(wk=>{
+    const r=WEEK_RANGES[wk];if(!r)return '';
+    const vs=arr.filter(d=>d[f1]&&d[f2]).filter(d=>{
+      const s=String(d[f2]).slice(0,10);return s>=r.start&&s<=r.end;
+    }).map(d=>(new Date(d[f2])-new Date(d[f1]))/86400000).filter(x=>x>=0&&x<500);
+    const v=vs.length?(vs.reduce((a,b)=>a+b,0)/vs.length).toFixed(1):null;
+    const maxV=10;
+    return `<div class="wb-row">
+      <span class="wb-lbl">${wk}</span>
+      <div class="wb-bar-wrap"><div class="wb-bar" style="width:${v?Math.min(parseFloat(v)/maxV*100,100)+'%':'0'};background:${color}88"></div></div>
+      <span class="wb-val">${v??'—'} d</span>
+    </div>`;
+  }).join('');
+  return `<div class="time-section">
+    <div class="time-label">${label}</div>
     <div class="tbox">
-      <div class="tb-n">${t.n||'—'}</div>
-      <div class="tb-u">${t.u}</div>
-      <div class="tb-l">${t.l}</div>
-      ${t.warn?`<div class="tb-warn">⚠ ${t.warn}</div>`:''}
-    </div>`).join('')}</div>`;
+      <div class="tb-n">${avg||'—'}</div>
+      <div class="tb-u">${unit} (media periodo)</div>
+      ${outliers>0?`<div class="tb-warn">⚠ ${outliers} anomalías excluidas</div>`:''}
+    </div>
+    <div class="week-breakdown" style="margin-top:8px">
+      <div class="wb-title">Por semana</div>
+      ${weekRows}
+    </div>
+  </div>`;
 }
 
 function splitBar(a,b,la,lb,ca,cb){
@@ -626,12 +665,11 @@ function provBars(map,color){
   const entries=Object.entries(map).sort((a,b)=>b[1]-a[1]).slice(0,8);
   if(!entries.length) return '<div style="font-size:12px;color:#94A3B8">Sin datos</div>';
   const mx=entries[0][1];
-  return entries.map(([n,v])=>`
-    <div class="prov-row">
-      <span class="prov-name" title="${n}">${n||'Sin nombre'}</span>
-      <div class="prov-bw"><div class="prov-bf" style="width:${Math.round(v/mx*100)}%;background:${color}88"></div></div>
-      <span class="prov-n">${v}</span>
-    </div>`).join('');
+  return entries.map(([n,v])=>`<div class="prov-row">
+    <span class="prov-name" title="${n}">${n||'Sin nombre'}</span>
+    <div class="prov-bw"><div class="prov-bf" style="width:${Math.round(v/mx*100)}%;background:${color}88"></div></div>
+    <span class="prov-n">${v}</span>
+  </div>`).join('');
 }
 
 function mkBar(id,data,col,targets){
@@ -641,14 +679,11 @@ function mkBar(id,data,col,targets){
   charts[id]=new Chart(document.getElementById(id),{type:'bar',data:{labels:MONTHS,datasets},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false},ticks:{font:{size:10},maxRotation:0}},y:{beginAtZero:true,ticks:{font:{size:10}},grid:{color:'#F8FAFC'}}}}});
 }
 
-function showTab(id,el){
+function showTab(id,el,color){
   document.querySelectorAll('.tsec').forEach(s=>s.classList.remove('on'));
-  document.querySelectorAll('.atab').forEach(t=>{t.classList.remove('on');t.style.background='';t.style.color='';});
+  document.querySelectorAll('.atab').forEach(t=>{t.style.background='';t.style.color='';t.style.borderColor='';});
   document.getElementById('tsec-'+id).classList.add('on');
-  el.classList.add('on');
-  const colors={sv:'#7C3AED',ap:'#0EA5E9',eg:'#D97706',in:'#059669',ex:'#6366F1'};
-  el.style.background=colors[id]||'#0F172A';
-  el.style.color='white';
+  el.style.background=color;el.style.color='white';el.style.borderColor='transparent';
 }
 
 function buildWeekButtons(){
