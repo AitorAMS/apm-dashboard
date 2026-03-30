@@ -179,7 +179,7 @@ const TARGETS={
   eg:      [200,300,350,450,450,550,400,200,500,500,500,250],
   install: [140,181,230,343,385,528,405,255,485,446,457,345]
 };
-const APM_IDS=[1,2,3,4,8,9,13,16,17];
+const APM_IDS=[1,2,3,4,8,9,13,17];
 const F={
   svDone:'9b3b3995f1f726feaee7fdabbe6c7695ef7d7f09',
   svReq: '67225c24d04109f7fa56373160b7efeb1ba7b857',
@@ -244,7 +244,7 @@ async function apiGet(path){
   return r.json();
 }
 
-async function fetchAllByStatus(id, status){
+async function fetchAllByStatus(id,status){
   let all=[],start=0,page=0;
   while(true){
     page++;
@@ -258,16 +258,16 @@ async function fetchAllByStatus(id, status){
   }
   return all;
 }
+
 async function fetchPipe(id){
-  const [open, lost] = await Promise.all([
+  const [open,lost]=await Promise.all([
     fetchAllByStatus(id,'open'),
     fetchAllByStatus(id,'lost'),
   ]);
-  // Deduplicar por ID — un deal puede aparecer en open y lost
   const seen=new Set();
   const all=[...open,...lost].filter(d=>{
-    if(seen.has(d.id)) return false;
-    seen.add(d.id); return true;
+    if(seen.has(d.id))return false;
+    seen.add(d.id);return true;
   });
   console.log(`Pipeline ${id}: ${open.length} open + ${lost.length} lost = ${all.length} únicos`);
   return all;
@@ -291,7 +291,7 @@ async function go(){
   try{
     prog(5,'Resolviendo campos…');
     await buildOpts();
-    const names={1:'Acquisition',2:'Survey',3:'E&G',4:'Installation',8:'Network Design',9:'Live',13:'Disaster',16:'Acq.Ext',17:'Extension'};
+    const names={1:'Acquisition',2:'Survey',3:'E&G',4:'Installation',8:'Network Design',9:'Live',13:'Disaster',17:'Extension'};
     let loaded=0;
     const results=await Promise.all(APM_IDS.map(async id=>{
       const deals=await fetchPipe(id);
@@ -300,7 +300,12 @@ async function go(){
       return deals;
     }));
     prog(92,'Construyendo dashboard…');
-    const all=results.flat();
+    // Deduplicar globalmente por ID
+    const seen=new Set();
+    const all=results.flat().filter(d=>{
+      if(seen.has(d.id))return false;
+      seen.add(d.id);return true;
+    });
     window._allDeals=all;
     AD={all};
     buildWeekButtons();
@@ -308,7 +313,7 @@ async function go(){
     prog(100,'Listo');
     setTimeout(()=>document.getElementById('lbar').classList.remove('show'),600);
     document.getElementById('cdot').className='cdot on';
-    document.getElementById('cst').textContent=`${all.length.toLocaleString()} deals cargados de ${APM_IDS.length} pipelines APM`;
+    document.getElementById('cst').textContent=`${all.length.toLocaleString()} deals únicos cargados`;
     document.getElementById('main').style.display='block';
     document.getElementById('pbar').classList.add('show');
   }catch(e){
