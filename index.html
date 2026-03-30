@@ -244,20 +244,28 @@ async function apiGet(path){
   return r.json();
 }
 
-async function fetchPipe(id){
+async function fetchAllByStatus(id, status){
   let all=[],start=0,page=0;
   while(true){
     page++;
-    const d=await apiGet(`/pipelines/${id}/deals?limit=500&start=${start}&status=all_not_deleted`);
+    const d=await apiGet(`/pipelines/${id}/deals?limit=500&start=${start}&status=${status}`);
     const b=d.data||[];
     all=all.concat(b);
     const more=d.additional_data?.pagination?.more_items_in_collection;
-    console.log(`Pipeline ${id} p${page}: ${b.length} deals, más: ${more}`);
     if(!more||b.length===0)break;
     start+=500;
-    if(page>20)break;
+    if(page>50)break;
   }
-  console.log(`Pipeline ${id} TOTAL: ${all.length}`);
+  return all;
+}
+async function fetchPipe(id){
+  const [open, lost, won] = await Promise.all([
+    fetchAllByStatus(id,'open'),
+    fetchAllByStatus(id,'lost'),
+    fetchAllByStatus(id,'won'),
+  ]);
+  const all=[...open,...lost,...won];
+  console.log(`Pipeline ${id}: ${open.length} open + ${lost.length} lost + ${won.length} won = ${all.length} total`);
   return all;
 }
 
