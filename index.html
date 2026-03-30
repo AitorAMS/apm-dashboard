@@ -32,6 +32,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .week-row{display:flex;gap:4px;flex-wrap:wrap;align-items:center;padding:4px 0;width:100%}
 .main{padding:20px 24px;max-width:1440px;margin:0 auto;display:none}
 .err{background:#FEF2F2;border:1px solid #FCA5A5;border-radius:10px;padding:12px 16px;color:#991B1B;font-weight:600;font-size:13px;margin-bottom:16px;display:none}
+
+/* PIPELINE VISUAL */
 .pipeline-visual{display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin-bottom:24px;background:white;border-radius:16px;border:1px solid #E2E8F0;overflow:hidden}
 .pv-step{padding:20px 16px;text-align:center;position:relative;border-right:1px solid #F1F5F9}
 .pv-step:last-child{border-right:none}
@@ -39,10 +41,30 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .pv-step:last-child::after{display:none}
 .pv-num{font-size:28px;font-weight:700;letter-spacing:-.5px;line-height:1;margin-bottom:2px}
 .pv-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#94A3B8;margin-bottom:4px}
-.pv-sub{font-size:11px;color:#64748B}
 .pv-ach{font-size:11px;font-weight:700;margin-top:4px}
 .pv-bar-wrap{height:4px;background:#E2E8F0;border-radius:99px;margin-top:6px;overflow:hidden}
 .pv-bar-fill{height:100%;border-radius:99px;transition:width .6s}
+
+/* INSIGHT BOX */
+.insight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
+.insight-card{background:white;border-radius:12px;padding:16px;border:1px solid #E2E8F0;border-left:4px solid #E2E8F0}
+.insight-card.warn{border-left-color:#F59E0B}
+.insight-card.danger{border-left-color:#EF4444}
+.insight-card.good{border-left-color:#10B981}
+.insight-card.info{border-left-color:#3B82F6}
+.insight-icon{font-size:18px;margin-bottom:6px}
+.insight-title{font-size:12px;font-weight:700;color:#0F172A;margin-bottom:4px}
+.insight-text{font-size:12px;color:#64748B;line-height:1.5}
+
+/* PROJECTION CARD */
+.proj-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.proj-card{background:white;border-radius:12px;padding:16px;border:1px solid #E2E8F0;text-align:center}
+.proj-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#94A3B8;margin-bottom:6px}
+.proj-num{font-size:26px;font-weight:700;letter-spacing:-.5px;line-height:1;margin-bottom:2px}
+.proj-sub{font-size:11px;color:#64748B}
+.proj-pace{font-size:11px;font-weight:600;margin-top:4px}
+
+/* SECTION TABS */
 .sec-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:#94A3B8;margin:20px 0 12px}
 .area-tabs{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap}
 .atab{padding:8px 18px;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;background:white;color:#64748B;border:1px solid #E2E8F0;transition:all .1s}
@@ -53,14 +75,19 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .sc-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
 .three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:16px}
+.four-col{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:16px}
+
+/* METRIC TABLE */
 .mtable{width:100%;border-collapse:collapse}
 .mtable td{padding:7px 8px;font-size:13px;border-bottom:1px solid #F8FAFC;vertical-align:middle}
 .mtable tr:last-child td{border-bottom:none}
 .mtable tr:hover td{background:#FAFAFA}
 .ml{color:#374151;font-weight:500}
-.ml-sub{color:#94A3B8;font-weight:400;font-size:12px;padding-left:12px}
+.ml-sub{color:#94A3B8;font-weight:400;font-size:12px;padding-left:14px}
 .mv{font-weight:700;color:#0F172A;text-align:right}
 .mv.red{color:#EF4444}.mv.grn{color:#059669}.mv.amb{color:#D97706}
+
+/* TIME */
 .time-section{margin-bottom:16px}
 .time-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#94A3B8;margin-bottom:8px}
 .tbox{background:#F8FAFC;border-radius:8px;padding:12px;text-align:center;margin-bottom:8px}
@@ -75,6 +102,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .wb-bar-wrap{flex:1;height:5px;background:#E2E8F0;border-radius:99px;overflow:hidden}
 .wb-bar{height:100%;border-radius:99px}
 .wb-val{font-size:11px;font-weight:700;min-width:32px;text-align:right;color:#374151}
+
+/* FUNNEL + PROV */
 .funnel-step{display:flex;align-items:center;gap:10px;margin-bottom:8px}
 .fs-lbl{font-size:12px;font-weight:600;color:#374151;width:150px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .fs-bw{flex:1;height:9px;background:#F1F5F9;border-radius:99px;overflow:hidden}
@@ -86,9 +115,17 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .prov-bf{height:100%;border-radius:99px}
 .prov-n{font-size:12px;font-weight:700;min-width:28px;text-align:right;color:#64748B}
 .chart-wrap{position:relative;height:160px;margin-top:8px}
+.chart-wrap-lg{position:relative;height:220px;margin-top:8px}
+
+/* TREND INDICATOR */
+.trend{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px}
+.trend.up{background:#D1FAE5;color:#065F46}
+.trend.dn{background:#FEE2E2;color:#7F1D1D}
+.trend.flat{background:#F1F5F9;color:#475569}
+
 @media(max-width:1100px){.pipeline-visual{grid-template-columns:repeat(3,1fr)}.pv-step::after{display:none}}
-@media(max-width:900px){.two-col,.three-col{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.pipeline-visual{grid-template-columns:repeat(2,1fr)}.two-col,.three-col{grid-template-columns:1fr}}
+@media(max-width:900px){.two-col,.three-col,.four-col,.insight-grid,.proj-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.pipeline-visual{grid-template-columns:repeat(2,1fr)}.two-col,.three-col,.four-col,.insight-grid,.proj-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -131,8 +168,43 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 
 <div class="main" id="main">
   <div id="err" class="err"></div>
+
+  <!-- PIPELINE -->
   <div class="sec-title">Flujo de red — visión global</div>
   <div class="pipeline-visual" id="pipeline-visual"></div>
+
+  <!-- PROYECCIONES -->
+  <div class="sec-title">Proyección fin de mes</div>
+  <div class="proj-grid" id="proj-grid"></div>
+
+  <!-- INSIGHTS -->
+  <div class="sec-title">Análisis automático — puntos de atención</div>
+  <div class="insight-grid" id="insight-grid"></div>
+
+  <!-- ANÁLISIS VISUAL -->
+  <div class="sec-title">Análisis de rendimiento</div>
+  <div class="two-col" style="margin-bottom:16px">
+    <div class="section-card">
+      <div class="sc-head"><span class="sc-dot" style="background:#3B82F6"></span>Evolución semanal vs objetivo</div>
+      <div class="chart-wrap-lg"><canvas id="weekly-chart"></canvas></div>
+    </div>
+    <div class="section-card">
+      <div class="sc-head"><span class="sc-dot" style="background:#3B82F6"></span>Tasas de conversión por mes</div>
+      <div class="chart-wrap-lg"><canvas id="conv-chart"></canvas></div>
+    </div>
+  </div>
+  <div class="two-col" style="margin-bottom:16px">
+    <div class="section-card">
+      <div class="sc-head"><span class="sc-dot" style="background:#3B82F6"></span>Ciclo completo Ready→Live (días medios por mes)</div>
+      <div class="chart-wrap-lg"><canvas id="cycle-chart"></canvas></div>
+    </div>
+    <div class="section-card">
+      <div class="sc-head"><span class="sc-dot" style="background:#3B82F6"></span>Lost rate Survey vs E&G (% mensual)</div>
+      <div class="chart-wrap-lg"><canvas id="lost-chart"></canvas></div>
+    </div>
+  </div>
+
+  <!-- DETALLE POR ÁREA -->
   <div class="sec-title">Detalle por área</div>
   <div class="area-tabs">
     <div class="atab on" style="background:#7C3AED;color:white;border-color:transparent" onclick="showTab('sv',this,'#7C3AED')">Survey</div>
@@ -142,7 +214,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <div class="atab" onclick="showTab('ex',this,'#6366F1')">Extensiones</div>
   </div>
 
-  <!-- SURVEY -->
   <div class="tsec on" id="tsec-sv">
     <div class="three-col">
       <div class="section-card">
@@ -164,7 +235,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     </div>
   </div>
 
-  <!-- APPROVALS -->
   <div class="tsec" id="tsec-ap">
     <div class="three-col">
       <div class="section-card">
@@ -182,7 +252,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     </div>
   </div>
 
-  <!-- E&G -->
   <div class="tsec" id="tsec-eg">
     <div class="three-col">
       <div class="section-card">
@@ -200,7 +269,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     </div>
   </div>
 
-  <!-- INSTALACIONES -->
   <div class="tsec" id="tsec-in">
     <div class="three-col">
       <div class="section-card">
@@ -223,7 +291,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     </div>
   </div>
 
-  <!-- EXTENSIONES -->
   <div class="tsec" id="tsec-ex">
     <div class="two-col">
       <div class="section-card">
@@ -241,24 +308,18 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
 const MONTHS=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
-
-// Targets mensuales
 const TARGETS_M={
   survey: [300,550,600,700,650,700,600,250,600,600,650,400],
   approval:[255,360,480,550,550,575,500,200,500,550,550,300],
   eg:      [250,300,350,450,450,550,400,200,500,500,500,250],
   install: [140,181,230,343,385,528,405,255,485,446,457,345]
 };
-
-// Targets semanales — ISO W1..W53
-// Jan W1-W5, Feb W6-W9, Mar W10-W13, Apr W14-W17+W18
 const TARGETS_W={
   survey: {W1:60,W2:60,W3:60,W4:60,W5:60,W6:138,W7:138,W8:138,W9:138,W10:150,W11:150,W12:150,W13:150,W14:100,W15:150,W16:150,W17:150,W18:150},
   approval:{W1:51,W2:51,W3:51,W4:51,W5:51,W6:80,W7:80,W8:100,W9:100,W10:120,W11:120,W12:120,W13:120,W14:75,W15:100,W16:125,W17:125,W18:125},
   eg:      {W1:50,W2:50,W3:50,W4:50,W5:50,W6:75,W7:75,W8:75,W9:75,W10:75,W11:100,W12:100,W13:75,W14:50,W15:75,W16:100,W17:100,W18:125},
   install: {W1:0,W2:10,W3:35,W4:42,W5:53,W6:36,W7:47,W8:49,W9:49,W10:57,W11:63,W12:62,W13:48,W14:48,W15:63,W16:74,W17:79,W18:79}
 };
-
 const APM_IDS=[1,2,3,4,8,9,13,17];
 const PIPELINE_STAGES={
   2:[116,62,46,6,33,154,70,32,9],
@@ -295,10 +356,8 @@ const F={
   exDone:'4a4e30eb9d47fc061dea264544ccd5b6b86c08dd',
 };
 let tok='',PROXY='',OPT={},AD={},charts={},period='03';
-
 const pct=(a,b)=>b>0?Math.round(a/b*100):0;
 const prog=(p,t)=>{document.getElementById('lf').style.width=p+'%';document.getElementById('ltx').textContent=t};
-
 const WEEK_RANGES=(()=>{
   const map={},w1=new Date('2025-12-29'),today=new Date();
   for(let w=1;w<=53;w++){
@@ -308,100 +367,76 @@ const WEEK_RANGES=(()=>{
   }
   return map;
 })();
-
 function inPrd(d,f){
   const v=d[f];if(!v)return false;
   const s=String(v).slice(0,10);
   if(period==='ytd') return s.startsWith('2026');
-  if(period.startsWith('q')){
-    const qm={q1:['01','02','03'],q2:['04','05','06'],q3:['07','08','09'],q4:['10','11','12']};
-    return(qm[period]||[]).some(m=>s.startsWith('2026-'+m));
-  }
+  if(period.startsWith('q')){const qm={q1:['01','02','03'],q2:['04','05','06'],q3:['07','08','09'],q4:['10','11','12']};return(qm[period]||[]).some(m=>s.startsWith('2026-'+m));}
   if(period.startsWith('W')){const r=WEEK_RANGES[period];if(!r)return false;return s>=r.start&&s<=r.end;}
   return s.startsWith('2026-'+period);
 }
-function byM(arr,f,m){
-  return arr.filter(d=>{const v=d[f];if(!v)return false;return String(v).startsWith('2026-'+String(m+1).padStart(2,'0'));}).length;
-}
-function byW(arr,f,wk){
-  const r=WEEK_RANGES[wk];if(!r)return 0;
-  return arr.filter(d=>{const v=d[f];if(!v)return false;const s=String(v).slice(0,10);return s>=r.start&&s<=r.end;}).length;
-}
+function byM(arr,f,m){return arr.filter(d=>{const v=d[f];if(!v)return false;return String(v).startsWith('2026-'+String(m+1).padStart(2,'0'));}).length;}
+function byW(arr,f,wk){const r=WEEK_RANGES[wk];if(!r)return 0;return arr.filter(d=>{const v=d[f];if(!v)return false;const s=String(v).slice(0,10);return s>=r.start&&s<=r.end;}).length;}
 function cntP(arr,f){return arr.filter(d=>inPrd(d,f)).length;}
-function avgDays(arr,f1,f2,excludeOutliers=false){
+function avgDays(arr,f1,f2,excl=false){
   let vs=arr.filter(d=>d[f1]&&d[f2]).map(d=>(new Date(d[f2])-new Date(d[f1]))/86400000).filter(x=>x>=0&&x<500);
-  if(excludeOutliers&&vs.length>4){
-    const sorted=[...vs].sort((a,b)=>a-b);
-    const q1=sorted[Math.floor(sorted.length*.25)],q3=sorted[Math.floor(sorted.length*.75)];
-    const iqr=q3-q1;vs=vs.filter(x=>x>=q1-1.5*iqr&&x<=q3+1.5*iqr);
-  }
+  if(excl&&vs.length>4){const s=[...vs].sort((a,b)=>a-b);const q1=s[Math.floor(s.length*.25)],q3=s[Math.floor(s.length*.75)],iqr=q3-q1;vs=vs.filter(x=>x>=q1-1.5*iqr&&x<=q3+1.5*iqr);}
   return vs.length?(vs.reduce((a,b)=>a+b,0)/vs.length).toFixed(1):null;
 }
-function countOutliers(arr,f1,f2){
+function avgDaysByM(arr,f1,f2,m){
+  const vs=arr.filter(d=>{const v=d[f2];return v&&String(v).startsWith('2026-'+String(m+1).padStart(2,'0'))&&d[f1];}).map(d=>(new Date(d[f2])-new Date(d[f1]))/86400000).filter(x=>x>=0&&x<300);
+  return vs.length?(vs.reduce((a,b)=>a+b,0)/vs.length).toFixed(1):null;
+}
+function countOut(arr,f1,f2){
   const vs=arr.filter(d=>d[f1]&&d[f2]).map(d=>(new Date(d[f2])-new Date(d[f1]))/86400000).filter(x=>x>=0&&x<500);
   if(vs.length<=4)return 0;
-  const sorted=[...vs].sort((a,b)=>a-b);
-  const q1=sorted[Math.floor(sorted.length*.25)],q3=sorted[Math.floor(sorted.length*.75)];
-  const iqr=q3-q1;return vs.filter(x=>x<q1-1.5*iqr||x>q3+1.5*iqr).length;
+  const s=[...vs].sort((a,b)=>a-b);const q1=s[Math.floor(s.length*.25)],q3=s[Math.floor(s.length*.75)],iqr=q3-q1;
+  return vs.filter(x=>x<q1-1.5*iqr||x>q3+1.5*iqr).length;
 }
 const resolveEnum=v=>OPT[v]||OPT[String(v)]||String(v||'');
-function provMap(arr,f,pf){
-  const map={};
-  arr.filter(d=>inPrd(d,pf)&&d[f]).forEach(d=>{const n=resolveEnum(d[f])||'Sin proveedor';map[n]=(map[n]||0)+1;});
-  return map;
-}
+function provMap(arr,f,pf){const map={};arr.filter(d=>inPrd(d,pf)&&d[f]).forEach(d=>{const n=resolveEnum(d[f])||'Sin proveedor';map[n]=(map[n]||0)+1;});return map;}
 function getTarget(key){
   const mIdx={'01':0,'02':1,'03':2,'04':3,'05':4,'06':5,'07':6,'08':7,'09':8,'10':9,'11':10,'12':11};
   const mi=mIdx[period]??null;
-  if(mi!==null) return TARGETS_M[key]?.[mi]??0;
-  if(period.startsWith('W')) return TARGETS_W[key]?.[period]??0;
-  if(period.startsWith('q')){
-    const qm={q1:[0,1,2],q2:[3,4,5],q3:[6,7,8],q4:[9,10,11]};
-    return(qm[period]||[]).reduce((s,i)=>s+(TARGETS_M[key]?.[i]??0),0);
-  }
-  return (TARGETS_M[key]||[]).reduce((a,b)=>a+b,0);
+  if(mi!==null)return TARGETS_M[key]?.[mi]??0;
+  if(period.startsWith('W'))return TARGETS_W[key]?.[period]??0;
+  if(period.startsWith('q')){const qm={q1:[0,1,2],q2:[3,4,5],q3:[6,7,8],q4:[9,10,11]};return(qm[period]||[]).reduce((s,i)=>s+(TARGETS_M[key]?.[i]??0),0);}
+  return(TARGETS_M[key]||[]).reduce((a,b)=>a+b,0);
+}
+function getDaysInMonth(){
+  const mIdx={'01':0,'02':1,'03':2,'04':3,'05':4,'06':5,'07':6,'08':7,'09':8,'10':9,'11':10,'12':11};
+  const mi=mIdx[period]??null;if(mi===null)return null;
+  return new Date(2026,mi+1,0).getDate();
+}
+function getDaysElapsed(){
+  const mIdx={'01':0,'02':1,'03':2,'04':3,'05':4,'06':5,'07':6,'08':7,'09':8,'10':9,'11':10,'12':11};
+  const mi=mIdx[period]??null;if(mi===null)return null;
+  const today=new Date();
+  if(today.getFullYear()===2026&&today.getMonth()===mi) return today.getDate();
+  if(today.getFullYear()===2026&&today.getMonth()>mi) return getDaysInMonth();
+  return null;
 }
 
 async function apiGet(path){
   const r=await fetch(`${PROXY}/pipedrive${path}`,{headers:{'x-pipedrive-token':tok}});
-  if(!r.ok)throw new Error('HTTP '+r.status);
-  return r.json();
+  if(!r.ok)throw new Error('HTTP '+r.status);return r.json();
 }
 async function fetchAllByStatus(id,status){
   let all=[],start=0,page=0;
-  while(true){
-    page++;
-    const d=await apiGet(`/pipelines/${id}/deals?limit=500&start=${start}&status=${status}`);
-    const b=d.data||[];all=all.concat(b);
-    const more=d.additional_data?.pagination?.more_items_in_collection;
-    if(!more||b.length===0)break;start+=b.length;if(page>50)break;
-  }
+  while(true){page++;const d=await apiGet(`/pipelines/${id}/deals?limit=500&start=${start}&status=${status}`);const b=d.data||[];all=all.concat(b);const more=d.additional_data?.pagination?.more_items_in_collection;if(!more||b.length===0)break;start+=b.length;if(page>50)break;}
   return all;
 }
 async function fetchAllByStages(stages,status){
   let all=[];
-  for(const sid of stages){
-    let start=0,page=0;
-    while(true){
-      page++;
-      const d=await apiGet(`/deals?limit=500&start=${start}&stage_id=${sid}&status=${status}`);
-      const b=d.data||[];all=all.concat(b);
-      const more=d.additional_data?.pagination?.more_items_in_collection;
-      if(!more||b.length===0)break;start+=b.length;if(page>50)break;
-    }
-  }
+  for(const sid of stages){let start=0,page=0;while(true){page++;const d=await apiGet(`/deals?limit=500&start=${start}&stage_id=${sid}&status=${status}`);const b=d.data||[];all=all.concat(b);const more=d.additional_data?.pagination?.more_items_in_collection;if(!more||b.length===0)break;start+=b.length;if(page>50)break;}}
   return all;
 }
 async function fetchPipe(id){
   const stages=PIPELINE_STAGES[id]||[];
   const [open,lost]=await Promise.all([fetchAllByStatus(id,'open'),fetchAllByStages(stages,'lost')]);
-  const seen=new Set();
-  return [...open,...lost].filter(d=>{if(seen.has(d.id))return false;seen.add(d.id);return true;});
+  const seen=new Set();return [...open,...lost].filter(d=>{if(seen.has(d.id))return false;seen.add(d.id);return true;});
 }
-async function buildOpts(){
-  const d=await apiGet('/dealFields?limit=500');
-  (d.data||[]).forEach(f=>(f.options||[]).forEach(o=>{OPT[o.id]=o.label;OPT[String(o.id)]=o.label;}));
-}
+async function buildOpts(){const d=await apiGet('/dealFields?limit=500');(d.data||[]).forEach(f=>(f.options||[]).forEach(o=>{OPT[o.id]=o.label;OPT[String(o.id)]=o.label;}));}
 
 async function go(){
   tok=document.getElementById('tok').value.trim();
@@ -417,11 +452,7 @@ async function go(){
     prog(5,'Resolviendo campos…');await buildOpts();
     const names={1:'Acquisition',2:'Survey',3:'E&G',4:'Installation',8:'Network Design',9:'Live',13:'Disaster',17:'Extension'};
     let loaded=0;
-    const results=await Promise.all(APM_IDS.map(async id=>{
-      const deals=await fetchPipe(id);loaded++;
-      prog(10+Math.round(loaded/APM_IDS.length*80),`Cargando ${names[id]}… (${loaded}/${APM_IDS.length})`);
-      return deals;
-    }));
+    const results=await Promise.all(APM_IDS.map(async id=>{const deals=await fetchPipe(id);loaded++;prog(10+Math.round(loaded/APM_IDS.length*80),`Cargando ${names[id]}… (${loaded}/${APM_IDS.length})`);return deals;}));
     prog(92,'Construyendo dashboard…');
     const seen=new Set();
     const all=results.flat().filter(d=>{if(seen.has(d.id))return false;seen.add(d.id);return true;});
@@ -435,36 +466,22 @@ async function go(){
     document.getElementById('pbar').classList.add('show');
   }catch(e){
     document.getElementById('lbar').classList.remove('show');
-    const el=document.getElementById('err');
-    el.textContent='Error: '+e.message;el.style.display='block';
-    document.getElementById('main').style.display='block';
-    document.getElementById('cst').textContent='Error';
+    const el=document.getElementById('err');el.textContent='Error: '+e.message;el.style.display='block';
+    document.getElementById('main').style.display='block';document.getElementById('cst').textContent='Error';
   }
 }
 
 function setPeriod(p){
-  period=p;
-  document.querySelectorAll('.pp').forEach(el=>el.classList.remove('on'));
+  period=p;document.querySelectorAll('.pp').forEach(el=>el.classList.remove('on'));
   const el=document.getElementById('p-'+p);if(el)el.classList.add('on');
   if(AD.all)render();
 }
 
 function render(){
   const{all}=AD;
-
-  const rdySv=cntP(all,F.rdySv);
-  const svDone=cntP(all,F.svDone);
-  const svReq=cntP(all,F.svReq);
-  const svSch=cntP(all,F.svSch);
-  const egDone=cntP(all,F.egDone);
-  const egReq=cntP(all,F.egReq);
-  const egSch=cntP(all,F.egSch);
-  const egFail=cntP(all,F.egFail);
-  const inDep=cntP(all,F.inDep);
-  const inDone=cntP(all,F.inDone);
-  const inLive=cntP(all,F.inLive);
-  const inSch=cntP(all,F.inSch);
-  const inRmv=cntP(all,F.inRmv);
+  const rdySv=cntP(all,F.rdySv),svDone=cntP(all,F.svDone),svReq=cntP(all,F.svReq),svSch=cntP(all,F.svSch);
+  const egDone=cntP(all,F.egDone),egReq=cntP(all,F.egReq),egSch=cntP(all,F.egSch),egFail=cntP(all,F.egFail);
+  const inDep=cntP(all,F.inDep),inDone=cntP(all,F.inDone),inLive=cntP(all,F.inLive),inSch=cntP(all,F.inSch),inRmv=cntP(all,F.inRmv);
   const apPart=cntP(all,F.apPart);
   const exAll=all.filter(d=>d.pipeline_id===17);
   const exDone=exAll.filter(d=>inPrd(d,F.exDone)).length;
@@ -472,48 +489,31 @@ function render(){
   const tSv=getTarget('survey'),tAp=getTarget('approval'),tEg=getTarget('eg'),tIn=getTarget('install');
   const svAch=pct(svDone,tSv),apAch=pct(apPart,tAp),egAch=pct(egDone,tEg),inAch=pct(inDep,tIn);
 
-  // Aprobaciones por tipo
   const apChain=all.filter(d=>inPrd(d,F.apPart)&&resolveEnum(d[F.land]).toLowerCase().includes('chain')).length;
   const apIndFra=apPart-apChain;
-
-  // Survey lost
   const svLost=all.filter(d=>d.status==='lost'&&d[F.svDone]&&inPrd(d,F.svDone)).length;
   const svLostPct=pct(svLost,svDone);
-
-  // InPost vs externos
   const svInt=all.filter(d=>inPrd(d,F.svDone)&&d[F.svProv]&&resolveEnum(d[F.svProv]).toLowerCase().includes('inpost')).length;
   const svExt=svDone-svInt;
-
-  // Instalaciones desglose
   const inChain=all.filter(d=>inPrd(d,F.inDep)&&resolveEnum(d[F.land]).toLowerCase().includes('chain')).length;
   const inIndFra=inDep-inChain;
   const inIndoor=all.filter(d=>inPrd(d,F.inDep)&&resolveEnum(d[F.indoor]).toLowerCase().includes('indoor')).length;
   const inOutdoor=inDep-inIndoor;
-
-  // Locker sizes
   const sizeMap={};
-  all.filter(d=>inPrd(d,F.inDep)&&d[F.apmSize]).forEach(d=>{
-    const s=resolveEnum(d[F.apmSize])||'Otro';sizeMap[s]=(sizeMap[s]||0)+1;
-  });
+  all.filter(d=>inPrd(d,F.inDep)&&d[F.apmSize]).forEach(d=>{const s=resolveEnum(d[F.apmSize])||'Otro';sizeMap[s]=(sizeMap[s]||0)+1;});
 
-  // Tiempos
   const tSvRS=avgDays(all,F.svReq,F.svSch);
   const tEgRS=avgDays(all,F.egReq,F.egSch);
   const tEgIn=avgDays(all,F.egDone,F.inDone,true);
-  const egInOut=countOutliers(all,F.egDone,F.inDone);
+  const egInOut=countOut(all,F.egDone,F.inDone);
   const tApSv=avgDays(all,F.svDone,F.apPart);
   const tApIn=avgDays(all,F.apPart,F.inDone,true);
-  const apInOut=countOutliers(all,F.apPart,F.inDone);
-
-  // Weekly breakdown para tiempos (últimas 4 semanas disponibles)
+  const apInOut=countOut(all,F.apPart,F.inDone);
   const recentWeeks=Object.keys(WEEK_RANGES).slice(-4);
 
-  // Extensiones mensuales
-  const exArr=MONTHS.map((_,m)=>exAll.filter(d=>{const v=d[F.exDone];if(!v)return false;return String(v).startsWith('2026-'+String(m+1).padStart(2,'0'));}).length);
-
-  // Pipeline visual
+  // ── PIPELINE VISUAL
   const pvSteps=[
-    {label:'New Ready for Survey',num:rdySv,target:tSv,color:'#64748B',bg:'#F8FAFC'},
+    {label:'New Ready for Survey',num:rdySv,target:0,color:'#64748B',bg:'#F8FAFC'},
     {label:'Survey',num:svDone,target:tSv,ach:svAch,color:'#7C3AED',bg:'#F5F3FF'},
     {label:'Approval',num:apPart,target:tAp,ach:apAch,color:'#0EA5E9',bg:'#F0F9FF'},
     {label:'E&G',num:egDone,target:tEg,ach:egAch,color:'#D97706',bg:'#FFFBEB'},
@@ -521,163 +521,201 @@ function render(){
     {label:'Live',num:inLive,target:0,color:'#15803D',bg:'#DCFCE7'},
   ];
   document.getElementById('pipeline-visual').innerHTML=pvSteps.map(s=>{
-    const achColor=!s.ach?'#94A3B8':s.ach>=80?'#059669':s.ach>=55?'#D97706':'#EF4444';
+    const ac=s.ach??null;const achColor=ac===null?'#94A3B8':ac>=80?'#059669':ac>=55?'#D97706':'#EF4444';
     return `<div class="pv-step" style="background:${s.bg}">
       <div class="pv-label">${s.label}</div>
       <div class="pv-num" style="color:${s.color}">${s.num.toLocaleString()}</div>
-      ${s.target?`<div class="pv-ach" style="color:${achColor}">${s.ach??'—'}% obj. (${s.target})</div>`:'<div class="pv-sub">Activas en red</div>'}
-      <div class="pv-bar-wrap"><div class="pv-bar-fill" style="width:${Math.min(s.ach??0,100)}%;background:${s.color}"></div></div>
+      ${s.target?`<div class="pv-ach" style="color:${achColor}">${ac}% · obj ${s.target}</div>`:'<div style="font-size:11px;color:#64748B">En red</div>'}
+      <div class="pv-bar-wrap"><div class="pv-bar-fill" style="width:${Math.min(ac??0,100)}%;background:${s.color}"></div></div>
     </div>`;
   }).join('');
 
-  // ── SURVEY ──────────────────────────────────────
+  // ── PROYECCIONES (solo meses)
+  const daysIn=getDaysInMonth(),daysEl=getDaysElapsed();
+  document.getElementById('proj-grid').innerHTML=(['survey','approval','eg','install']).map((k,i)=>{
+    const vals=[svDone,apPart,egDone,inDep];const targets=[tSv,tAp,tEg,tIn];
+    const labels=['Survey','Approval','E&G','Installation'];const colors=['#7C3AED','#0EA5E9','#D97706','#059669'];
+    const v=vals[i],t=targets[i],c=colors[i];
+    let projHTML='';
+    if(daysIn&&daysEl&&daysEl>0){
+      const rate=v/daysEl;const proj=Math.round(rate*daysIn);
+      const diff=proj-t;const diffColor=diff>=0?'#059669':'#EF4444';
+      const diffText=diff>=0?`+${diff} sobre objetivo`:`${diff} bajo objetivo`;
+      projHTML=`<div class="proj-pace" style="color:${diffColor}">${diffText}</div><div style="font-size:10px;color:#94A3B8;margin-top:2px">Proyección: ${proj} (obj: ${t})</div>`;
+    }
+    const ach=pct(v,t);const achColor=ach>=80?'#059669':ach>=55?'#D97706':'#EF4444';
+    return `<div class="proj-card">
+      <div class="proj-label">${labels[i]}</div>
+      <div class="proj-num" style="color:${c}">${v.toLocaleString()}</div>
+      <div style="font-size:12px;color:#94A3B8">${ach}% del objetivo</div>
+      ${projHTML}
+    </div>`;
+  }).join('');
+
+  // ── INSIGHTS AUTOMÁTICOS
+  const insights=[];
+  // Bottleneck
+  const convs=[{l:'Ready→Survey',p:pct(svDone,rdySv)},{l:'Survey→Approval',p:pct(apPart,svDone)},{l:'Approval→E&G',p:pct(egDone,apPart)},{l:'E&G→Install',p:pct(inDep,egDone)}].filter(s=>s.p>0);
+  const bn=convs.sort((a,b)=>a.p-b.p)[0];
+  if(bn) insights.push({type:bn.p<50?'danger':'warn',icon:'⚠',title:`Cuello de botella: ${bn.l}`,text:`Solo el ${bn.p}% convierte en este paso. Es donde más se pierde trabajo en el pipeline.`});
+  // Survey lost rate
+  if(svLostPct>30) insights.push({type:'danger',icon:'✕',title:`${svLostPct}% de surveys se pierden`,text:`De ${svDone} surveys completados, ${svLost} no pueden avanzar. Revisar criterios de selección de ubicaciones.`});
+  else if(svLostPct>20) insights.push({type:'warn',icon:'!',title:`Lost rate Survey: ${svLostPct}%`,text:`${svLost} surveys sin posibilidad de avanzar. Tendencia a vigilar.`});
+  // E&G fallidos
+  const egFailPct=pct(egFail,egDone);
+  if(egFailPct>10) insights.push({type:'danger',icon:'✕',title:`E&G: ${egFailPct}% fallidos`,text:`${egFail} trabajos E&G fallidos de ${egDone}. Revisar criterios de viabilidad técnica antes de solicitar.`});
+  // Objetivos
+  if(svAch>=90) insights.push({type:'good',icon:'✓',title:`Survey en objetivo (${svAch}%)`,text:`Buen ritmo de surveys completados. Asegúrate de que el funnel de Approval no se convierte en cuello de botella.`});
+  if(inAch<60) insights.push({type:'danger',icon:'↓',title:`Instalaciones al ${inAch}% del objetivo`,text:`Solo ${inDep} máquinas desplegadas de ${tIn} objetivo. Revisar bloqueos en E&G o programación de instalaciones.`});
+  // Tiempo E&G→Install
+  if(tEgIn&&parseFloat(tEgIn)>20) insights.push({type:'warn',icon:'⏱',title:`Tiempo E&G→Instalación: ${tEgIn} días`,text:`El tiempo entre completar E&G e instalar es elevado. Puede haber retrasos en la programación de instaladores.`});
+  // Rellena hasta 3
+  while(insights.length<3) insights.push({type:'info',icon:'i',title:'Sin alertas adicionales',text:'El resto de indicadores están dentro de rangos normales.'});
+  const iColors={danger:'#EF4444',warn:'#F59E0B',good:'#10B981',info:'#3B82F6'};
+  document.getElementById('insight-grid').innerHTML=insights.slice(0,3).map(ins=>`
+    <div class="insight-card ${ins.type}">
+      <div class="insight-icon">${ins.icon}</div>
+      <div class="insight-title">${ins.title}</div>
+      <div class="insight-text">${ins.text}</div>
+    </div>`).join('');
+
+  // ── GRÁFICOS ANÁLISIS
+  // 1. Evolución semanal vs objetivo (últimas 8 semanas)
+  const wks=Object.keys(WEEK_RANGES).slice(-8);
+  const svW=wks.map(w=>byW(all,F.svDone,w));
+  const tSvW=wks.map(w=>TARGETS_W.survey[w]??0);
+  const inW=wks.map(w=>byW(all,F.inDep,w));
+  const tInW=wks.map(w=>TARGETS_W.install[w]??0);
+  mkChart('weekly-chart','bar',wks,[
+    {label:'Survey real',data:svW,backgroundColor:'#7C3AED55',borderColor:'#7C3AED',borderWidth:1,borderRadius:3},
+    {label:'Survey obj',data:tSvW,type:'line',borderColor:'#7C3AED',borderWidth:1.5,pointRadius:3,fill:false,borderDash:[4,3]},
+    {label:'Install real',data:inW,backgroundColor:'#05966955',borderColor:'#059669',borderWidth:1,borderRadius:3},
+    {label:'Install obj',data:tInW,type:'line',borderColor:'#059669',borderWidth:1.5,pointRadius:3,fill:false,borderDash:[4,3]},
+  ],{legend:true,yLabel:'Cantidad'});
+
+  // 2. Tasas de conversión mensuales (Ene-Mar)
+  const convMonths=['Ene','Feb','Mar'];
+  const svConvM=convMonths.map((_,m)=>pct(byM(all,F.svDone,m),byM(all,F.rdySv,m)));
+  const egConvM=convMonths.map((_,m)=>pct(byM(all,F.egDone,m),byM(all,F.svDone,m)));
+  const inConvM=convMonths.map((_,m)=>pct(byM(all,F.inDep,m),byM(all,F.egDone,m)));
+  const apConvM=convMonths.map((_,m)=>pct(byM(all,F.apPart,m),byM(all,F.svDone,m)));
+  mkChart('conv-chart','line',convMonths,[
+    {label:'Survey→Approval',data:apConvM,borderColor:'#0EA5E9',backgroundColor:'#0EA5E922',tension:.3,pointRadius:5,fill:true,borderWidth:2},
+    {label:'Approval→E&G',data:egConvM,borderColor:'#D97706',backgroundColor:'#D9770622',tension:.3,pointRadius:5,fill:true,borderWidth:2},
+    {label:'E&G→Install',data:inConvM,borderColor:'#059669',backgroundColor:'#05966922',tension:.3,pointRadius:5,fill:true,borderWidth:2},
+  ],{legend:true,yLabel:'%',yMax:120,pct:true});
+
+  // 3. Ciclo completo Ready→Live por mes
+  const cycleM=MONTHS.map((_,m)=>avgDaysByM(all,F.rdySv,F.inLive,m));
+  mkChart('cycle-chart','bar',MONTHS,[
+    {label:'Días ciclo completo',data:cycleM,backgroundColor:'#3B82F655',borderColor:'#3B82F6',borderWidth:1,borderRadius:3},
+  ],{legend:false,yLabel:'Días'});
+
+  // 4. Lost rate Survey vs E&G por mes
+  const svLostM=MONTHS.map((_,m)=>{
+    const done=byM(all,F.svDone,m);
+    const lost=all.filter(d=>d.status==='lost'&&d[F.svDone]).filter(d=>String(d[F.svDone]).startsWith('2026-'+String(m+1).padStart(2,'0'))).length;
+    return pct(lost,done);
+  });
+  const egLostM=MONTHS.map((_,m)=>{
+    const done=byM(all,F.egDone,m);
+    const fail=all.filter(d=>d[F.egFail]).filter(d=>String(d[F.egFail]).startsWith('2026-'+String(m+1).padStart(2,'0'))).length;
+    return pct(fail,done);
+  });
+  mkChart('lost-chart','line',MONTHS,[
+    {label:'% Lost Survey',data:svLostM,borderColor:'#7C3AED',backgroundColor:'#7C3AED22',tension:.3,pointRadius:4,fill:true,borderWidth:2},
+    {label:'% Lost E&G',data:egLostM,borderColor:'#EF4444',backgroundColor:'#EF444422',tension:.3,pointRadius:4,fill:true,borderWidth:2},
+  ],{legend:true,yLabel:'%',pct:true});
+
+  // ── TABS DETALLE
   document.getElementById('sv-metrics').innerHTML=rows([
     {l:'Completados',v:svDone},
-    {l:'↳ Externos',v:svExt,cls:'ml-sub'},
-    {l:'↳ InPost (internos)',v:svInt,cls:'ml-sub'},
-    {l:'Solicitados',v:svReq},
-    {l:'Programados',v:svSch},
-    {l:'Lost',v:svLost,c:svLostPct>40?'red':svLostPct>25?'amb':''},
-    {l:'% Lost',v:svLostPct+'%',c:svLostPct>40?'red':svLostPct>25?'amb':''},
-    {l:'Objetivo',v:tSv},
-    {l:'% Consecución',v:svAch+'%',c:svAch>=80?'grn':svAch>=55?'amb':'red'},
+    {l:'↳ Externos',v:svExt,cls:'ml-sub'},{l:'↳ InPost (internos)',v:svInt,cls:'ml-sub'},
+    {l:'Solicitados',v:svReq},{l:'Programados',v:svSch},
+    {l:'Lost',v:svLost,c:svLostPct>40?'red':svLostPct>25?'amb':''},{l:'% Lost',v:svLostPct+'%',c:svLostPct>40?'red':svLostPct>25?'amb':''},
+    {l:'Objetivo',v:tSv},{l:'% Consecución',v:svAch+'%',c:svAch>=80?'grn':svAch>=55?'amb':'red'},
   ]);
-  document.getElementById('sv-times').innerHTML=timeSectionWithWeeks('Solicitado → Programado',tSvRS,'días',all,F.svReq,F.svSch,recentWeeks,'#7C3AED');
+  document.getElementById('sv-times').innerHTML=timeSec('Solicitado → Programado',tSvRS,'días',all,F.svReq,F.svSch,recentWeeks,'#7C3AED');
   document.getElementById('sv-split').innerHTML=splitBar(svInt,svExt,'InPost','Externos','#1D4ED8','#7C3AED');
   document.getElementById('sv-prov').innerHTML=provBars(provMap(all,F.svProv,F.svDone),'#7C3AED');
 
-  // ── APPROVALS ──────────────────────────────────
   document.getElementById('ap-metrics').innerHTML=rows([
     {l:'Total aprobados por partner',v:apPart},
-    {l:'Chains',v:apChain},
-    {l:'Ind + Franchise',v:apIndFra},
-    {l:'Objetivo',v:tAp},
-    {l:'% Consecución',v:apAch+'%',c:apAch>=80?'grn':apAch>=55?'amb':'red'},
+    {l:'Chains',v:apChain},{l:'Ind + Franchise',v:apIndFra},
+    {l:'Objetivo',v:tAp},{l:'% Consecución',v:apAch+'%',c:apAch>=80?'grn':apAch>=55?'amb':'red'},
   ]);
   document.getElementById('ap-times').innerHTML=
-    timeSectionWithWeeks('Survey completado → Approval',tApSv,'días',all,F.svDone,F.apPart,recentWeeks,'#0EA5E9')+
-    `<div style="margin-top:12px">`+
-    timeSectionWithWeeks('Approval → Instalación',tApIn,'días',all,F.apPart,F.inDone,recentWeeks,'#0EA5E9',apInOut)+
-    `</div>`;
+    timeSec('Survey completado → Approval',tApSv,'días',all,F.svDone,F.apPart,recentWeeks,'#0EA5E9')+
+    '<div style="margin-top:12px">'+timeSec('Approval → Instalación',tApIn,'días',all,F.apPart,F.inDone,recentWeeks,'#0EA5E9',apInOut)+'</div>';
   document.getElementById('ap-split').innerHTML=splitBar(apChain,apIndFra,'Chains','Ind+Fra','#1D4ED8','#7C3AED');
 
-  // ── E&G ────────────────────────────────────────
   document.getElementById('eg-metrics').innerHTML=rows([
-    {l:'Completados (RfD)',v:egDone},
-    {l:'Solicitados',v:egReq},
-    {l:'Programados',v:egSch},
-    {l:'Lost',v:egFail,c:pct(egFail,egDone)>10?'red':pct(egFail,egDone)>5?'amb':''},
-    {l:'% Lost',v:pct(egFail,egDone)+'%',c:pct(egFail,egDone)>10?'red':pct(egFail,egDone)>5?'amb':''},
-    {l:'Objetivo',v:tEg},
-    {l:'% Consecución',v:egAch+'%',c:egAch>=80?'grn':egAch>=55?'amb':'red'},
+    {l:'Completados (RfD)',v:egDone},{l:'Solicitados',v:egReq},{l:'Programados',v:egSch},
+    {l:'Lost',v:egFail,c:pct(egFail,egDone)>10?'red':pct(egFail,egDone)>5?'amb':''},{l:'% Lost',v:pct(egFail,egDone)+'%',c:pct(egFail,egDone)>10?'red':pct(egFail,egDone)>5?'amb':''},
+    {l:'Objetivo',v:tEg},{l:'% Consecución',v:egAch+'%',c:egAch>=80?'grn':egAch>=55?'amb':'red'},
   ]);
   document.getElementById('eg-times').innerHTML=
-    timeSectionWithWeeks('Solicitado → Programado',tEgRS,'días',all,F.egReq,F.egSch,recentWeeks,'#D97706')+
-    `<div style="margin-top:12px">`+
-    timeSectionWithWeeks('E&G completado → Instalación',tEgIn,'días',all,F.egDone,F.inDone,recentWeeks,'#D97706',egInOut)+
-    `</div>`;
+    timeSec('Solicitado → Programado',tEgRS,'días',all,F.egReq,F.egSch,recentWeeks,'#D97706')+
+    '<div style="margin-top:12px">'+timeSec('E&G completado → Instalación',tEgIn,'días',all,F.egDone,F.inDone,recentWeeks,'#D97706',egInOut)+'</div>';
   document.getElementById('eg-prov').innerHTML=provBars(provMap(all,F.egProv,F.egDone),'#D97706');
 
-  // ── INSTALACIONES ──────────────────────────────
   document.getElementById('in-metrics').innerHTML=rows([
-    {l:'Desplegadas',v:inDep},
-    {l:'Completadas',v:inDone},
-    {l:'Programadas',v:inSch},
-    {l:'Removed',v:inRmv,c:inRmv>5?'amb':''},
-    {l:'Objetivo',v:tIn},
-    {l:'% Consecución',v:inAch+'%',c:inAch>=80?'grn':inAch>=55?'amb':'red'},
+    {l:'Desplegadas',v:inDep},{l:'Completadas',v:inDone},{l:'Programadas',v:inSch},
+    {l:'Removed',v:inRmv,c:inRmv>5?'amb':''},{l:'Objetivo',v:tIn},{l:'% Consecución',v:inAch+'%',c:inAch>=80?'grn':inAch>=55?'amb':'red'},
   ]);
-  document.getElementById('in-type').innerHTML=funnelRows([
-    {l:'Chains',v:inChain,c:'#1D4ED8'},
-    {l:'Ind + Franchise',v:inIndFra,c:'#7C3AED'},
-  ],inDep);
-  document.getElementById('in-indoor').innerHTML=funnelRows([
-    {l:'Indoor',v:inIndoor,c:'#059669'},
-    {l:'Outdoor',v:inOutdoor,c:'#0EA5E9'},
-  ],inDep);
-  document.getElementById('in-size').innerHTML=funnelRows(
-    Object.entries(sizeMap).sort((a,b)=>b[1]-a[1]).map(([l,v])=>({l,v,c:'#059669'})),
-    Math.max(...Object.values(sizeMap),1)
-  );
+  document.getElementById('in-type').innerHTML=funnelRows([{l:'Chains',v:inChain,c:'#1D4ED8'},{l:'Ind + Franchise',v:inIndFra,c:'#7C3AED'}],inDep);
+  document.getElementById('in-indoor').innerHTML=funnelRows([{l:'Indoor',v:inIndoor,c:'#059669'},{l:'Outdoor',v:inOutdoor,c:'#0EA5E9'}],inDep);
+  document.getElementById('in-size').innerHTML=funnelRows(Object.entries(sizeMap).sort((a,b)=>b[1]-a[1]).map(([l,v])=>({l,v,c:'#059669'})),Math.max(...Object.values(sizeMap),1));
   document.getElementById('in-prov').innerHTML=provBars(provMap(all,F.inProv,F.inDep),'#059669');
 
-  // ── EXTENSIONES ────────────────────────────────
-  document.getElementById('ex-metrics').innerHTML=rows([
-    {l:'Extensiones completadas',v:exDone},
-  ]);
-  mkBar('ex-ch',exArr,'#6366F1',[]);
+  const exArr=MONTHS.map((_,m)=>exAll.filter(d=>{const v=d[F.exDone];if(!v)return false;return String(v).startsWith('2026-'+String(m+1).padStart(2,'0'));}).length);
+  document.getElementById('ex-metrics').innerHTML=rows([{l:'Extensiones completadas',v:exDone}]);
+  mkChart('ex-ch','bar',MONTHS,[{label:'Extensiones',data:exArr,backgroundColor:'#6366F155',borderColor:'#6366F1',borderWidth:1,borderRadius:3}],{legend:false});
 }
 
-function rows(data){
-  return data.map(r=>`<tr>
-    <td class="${r.cls||'ml'}">${r.l}</td>
-    <td class="mv ${r.c||''}">${typeof r.v==='number'?r.v.toLocaleString():r.v}</td>
-  </tr>`).join('');
-}
+// ── UI HELPERS ──────────────────────────────────────────────────────────────
+function rows(data){return data.map(r=>`<tr><td class="${r.cls||'ml'}">${r.l}</td><td class="mv ${r.c||''}">${typeof r.v==='number'?r.v.toLocaleString():r.v}</td></tr>`).join('');}
 
-function timeSectionWithWeeks(label,avg,unit,arr,f1,f2,weeks,color,outliers=0){
-  const weekRows=weeks.map(wk=>{
+function timeSec(label,avg,unit,arr,f1,f2,weeks,color,outliers=0){
+  const wRows=weeks.map(wk=>{
     const r=WEEK_RANGES[wk];if(!r)return '';
-    const vs=arr.filter(d=>d[f1]&&d[f2]).filter(d=>{
-      const s=String(d[f2]).slice(0,10);return s>=r.start&&s<=r.end;
-    }).map(d=>(new Date(d[f2])-new Date(d[f1]))/86400000).filter(x=>x>=0&&x<500);
+    const vs=arr.filter(d=>d[f1]&&d[f2]).filter(d=>String(d[f2]).slice(0,10)>=r.start&&String(d[f2]).slice(0,10)<=r.end).map(d=>(new Date(d[f2])-new Date(d[f1]))/86400000).filter(x=>x>=0&&x<500);
     const v=vs.length?(vs.reduce((a,b)=>a+b,0)/vs.length).toFixed(1):null;
-    const maxV=10;
-    return `<div class="wb-row">
-      <span class="wb-lbl">${wk}</span>
-      <div class="wb-bar-wrap"><div class="wb-bar" style="width:${v?Math.min(parseFloat(v)/maxV*100,100)+'%':'0'};background:${color}88"></div></div>
-      <span class="wb-val">${v??'—'} d</span>
-    </div>`;
+    return `<div class="wb-row"><span class="wb-lbl">${wk}</span><div class="wb-bar-wrap"><div class="wb-bar" style="width:${v?Math.min(parseFloat(v)/30*100,100)+'%':'0'};background:${color}88"></div></div><span class="wb-val">${v??'—'}d</span></div>`;
   }).join('');
-  return `<div class="time-section">
-    <div class="time-label">${label}</div>
-    <div class="tbox">
-      <div class="tb-n">${avg||'—'}</div>
-      <div class="tb-u">${unit} (media periodo)</div>
-      ${outliers>0?`<div class="tb-warn">⚠ ${outliers} anomalías excluidas</div>`:''}
-    </div>
-    <div class="week-breakdown" style="margin-top:8px">
-      <div class="wb-title">Por semana</div>
-      ${weekRows}
-    </div>
-  </div>`;
+  return `<div class="time-section"><div class="time-label">${label}</div>
+    <div class="tbox"><div class="tb-n">${avg||'—'}</div><div class="tb-u">${unit} (media periodo)</div>${outliers>0?`<div class="tb-warn">⚠ ${outliers} anomalías excluidas</div>`:''}</div>
+    <div class="week-breakdown"><div class="wb-title">Por semana</div>${wRows}</div></div>`;
 }
 
 function splitBar(a,b,la,lb,ca,cb){
   const tot=a+b||1,pA=Math.round(a/tot*100);
-  return `<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:600;margin-bottom:6px">
-    <span style="color:${ca}">${la}: ${a}</span><span style="color:${cb}">${lb}: ${b}</span>
-  </div>
-  <div style="display:flex;height:10px;border-radius:99px;overflow:hidden;margin-bottom:4px">
-    <div style="width:${pA}%;background:${ca}"></div><div style="flex:1;background:${cb}"></div>
-  </div>
+  return `<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:600;margin-bottom:6px"><span style="color:${ca}">${la}: ${a}</span><span style="color:${cb}">${lb}: ${b}</span></div>
+  <div style="display:flex;height:10px;border-radius:99px;overflow:hidden;margin-bottom:4px"><div style="width:${pA}%;background:${ca}"></div><div style="flex:1;background:${cb}"></div></div>
   <div style="display:flex;justify-content:space-between;font-size:11px;color:#64748B"><span>${pA}%</span><span>${100-pA}%</span></div>`;
 }
 
-function funnelRows(steps,mx){
-  return steps.map(s=>`<div class="funnel-step">
-    <span class="fs-lbl">${s.l}</span>
-    <div class="fs-bw"><div class="fs-bf" style="width:${Math.round(s.v/Math.max(mx,1)*100)}%;background:${s.c}"></div></div>
-    <span class="fs-v" style="color:${s.c}">${s.v}</span>
-  </div>`).join('');
-}
+function funnelRows(steps,mx){return steps.map(s=>`<div class="funnel-step"><span class="fs-lbl">${s.l}</span><div class="fs-bw"><div class="fs-bf" style="width:${Math.round(s.v/Math.max(mx,1)*100)}%;background:${s.c}"></div></div><span class="fs-v" style="color:${s.c}">${s.v}</span></div>`).join('');}
 
 function provBars(map,color){
   const entries=Object.entries(map).sort((a,b)=>b[1]-a[1]).slice(0,8);
-  if(!entries.length) return '<div style="font-size:12px;color:#94A3B8">Sin datos</div>';
+  if(!entries.length)return '<div style="font-size:12px;color:#94A3B8">Sin datos</div>';
   const mx=entries[0][1];
-  return entries.map(([n,v])=>`<div class="prov-row">
-    <span class="prov-name" title="${n}">${n||'Sin nombre'}</span>
-    <div class="prov-bw"><div class="prov-bf" style="width:${Math.round(v/mx*100)}%;background:${color}88"></div></div>
-    <span class="prov-n">${v}</span>
-  </div>`).join('');
+  return entries.map(([n,v])=>`<div class="prov-row"><span class="prov-name" title="${n}">${n||'Sin nombre'}</span><div class="prov-bw"><div class="prov-bf" style="width:${Math.round(v/mx*100)}%;background:${color}88"></div></div><span class="prov-n">${v}</span></div>`).join('');
 }
 
-function mkBar(id,data,col,targets){
+function mkChart(id,type,labels,datasets,opts={}){
   if(charts[id])charts[id].destroy();
-  const datasets=[{label:'Real',data,backgroundColor:col+'99',borderColor:col,borderWidth:1,borderRadius:3}];
-  if(targets.length) datasets.push({label:'Objetivo',data:targets,type:'line',borderColor:'#CBD5E1',borderWidth:1.5,pointRadius:0,fill:false,borderDash:[4,4]});
-  charts[id]=new Chart(document.getElementById(id),{type:'bar',data:{labels:MONTHS,datasets},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false},ticks:{font:{size:10},maxRotation:0}},y:{beginAtZero:true,ticks:{font:{size:10}},grid:{color:'#F8FAFC'}}}}});
+  charts[id]=new Chart(document.getElementById(id),{
+    type,
+    data:{labels,datasets},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:opts.legend??false,labels:{font:{size:10},boxWidth:12}}},
+      scales:{
+        x:{grid:{display:false},ticks:{font:{size:10},maxRotation:0}},
+        y:{beginAtZero:true,max:opts.yMax??undefined,ticks:{font:{size:10},callback:v=>opts.pct?v+'%':v},grid:{color:'#F8FAFC'}}
+      }}
+  });
 }
 
 function showTab(id,el,color){
