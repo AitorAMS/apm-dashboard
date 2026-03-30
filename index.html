@@ -180,6 +180,16 @@ const TARGETS={
   install: [140,181,230,343,385,528,405,255,485,446,457,345]
 };
 const APM_IDS=[1,2,3,4,8,9,13,17];
+const PIPELINE_STAGES={
+  2:[116,62,46,6,33,154,70,32,9],
+  3:[171,76,117,47,77,13],
+  4:[15,71,96,49,16],
+  9:[104,66,64,105,67,68,153],
+  1:[1,152,2,114,151,150,21,22],
+  8:[55,60],
+  13:[137,128,127,129,175,130],
+  17:[155,157,158,159,160,172,161,162,163,164,173,165,166,168,169,170],
+};
 const F={
   svDone:'9b3b3995f1f726feaee7fdabbe6c7695ef7d7f09',
   svReq: '67225c24d04109f7fa56373160b7efeb1ba7b857',
@@ -200,13 +210,11 @@ const F={
   land:  '0cc4dfd4e72d45a5f0be9b48743a936cfe6c6a2b',
 };
 let tok='',PROXY='',OPT={},AD={},charts={},period='03';
-
 const pct=(a,b)=>b>0?Math.round(a/b*100):0;
 const prog=(p,t)=>{document.getElementById('lf').style.width=p+'%';document.getElementById('ltx').textContent=t};
 const color=(v,g=80,w=55)=>v>=g?'grn':v>=w?'amb':'red';
 const badgeCls=(v,g=80,w=55)=>v>=g?'bg-green':v>=w?'bg-amber':'bg-red';
 const cardCls=(v,g=80,w=55)=>v>=g?'kc-green':v>=w?'kc-amber':'kc-red';
-
 const WEEK_RANGES=(()=>{
   const map={},w1=new Date('2025-12-29'),today=new Date();
   for(let w=1;w<=53;w++){
@@ -216,7 +224,6 @@ const WEEK_RANGES=(()=>{
   }
   return map;
 })();
-
 function inPrd(d,f){
   const v=d[f];if(!v)return false;
   const s=String(v).slice(0,10);
@@ -237,28 +244,11 @@ function avgDays(arr,f1,f2){
   return vs.length?(vs.reduce((a,b)=>a+b,0)/vs.length).toFixed(1):null;
 }
 const resolveEnum=v=>OPT[v]||OPT[String(v)]||String(v||'');
-
 async function apiGet(path){
   const r=await fetch(`${PROXY}/pipedrive${path}`,{headers:{'x-pipedrive-token':tok}});
   if(!r.ok)throw new Error('HTTP '+r.status);
   return r.json();
 }
-
-async function fetchAllByStatus(id,status){
-  let all=[],start=0,page=0;
-  while(true){
-    page++;
-    const d=await apiGet(`/pipelines/${id}/deals?limit=500&start=${start}&status=${status}`);
-    const b=d.data||[];
-    all=all.concat(b);
-    const more=d.additional_data?.pagination?.more_items_in_collection;
-    if(!more||b.length===0)break;
-    start+=500;
-    if(page>50)break;
-  }
-  return all;
-}
-
 async function fetchAllByStatus(id,status){
   let all=[],start=0,page=0;
   while(true){
@@ -273,7 +263,6 @@ async function fetchAllByStatus(id,status){
   }
   return all;
 }
-
 async function fetchAllByStages(stages,status){
   let all=[];
   for(const sid of stages){
@@ -291,17 +280,6 @@ async function fetchAllByStages(stages,status){
   }
   return all;
 }
-
-const PIPELINE_STAGES={
-  2:[116,62,46,6,33,154,70,32,9],       // Survey
-  3:[171,76,117,47,77,13],               // E&G
-  4:[15,71,96,49,16],                    // Installation
-  9:[104,66,64,105,67,68,153],           // Live
-  1:[1,152,2,114,151,150,21,22],         // Acquisition
-  8:[55,60],                             // Network Design
-  13:[137,128,127,129,175,130],          // Disaster
-  17:[155,157,158,159,160,172,161,162,163,164,173,165,166,168,169,170], // Extension
-};
 async function fetchPipe(id){
   const stages=PIPELINE_STAGES[id]||[];
   const [open,lost]=await Promise.all([
@@ -316,12 +294,10 @@ async function fetchPipe(id){
   console.log(`Pipeline ${id}: ${open.length} open + ${lost.length} lost = ${all.length} únicos`);
   return all;
 }
-
 async function buildOpts(){
   const d=await apiGet('/dealFields?limit=500');
   (d.data||[]).forEach(f=>(f.options||[]).forEach(o=>{OPT[o.id]=o.label;OPT[String(o.id)]=o.label;}));
 }
-
 async function go(){
   tok=document.getElementById('tok').value.trim();
   PROXY=document.getElementById('proxy').value.trim().replace(/\/$/,'');
@@ -344,7 +320,6 @@ async function go(){
       return deals;
     }));
     prog(92,'Construyendo dashboard…');
-    // Deduplicar globalmente por ID
     const seen=new Set();
     const all=results.flat().filter(d=>{
       if(seen.has(d.id))return false;
@@ -369,14 +344,12 @@ async function go(){
     document.getElementById('cst').textContent='Error';
   }
 }
-
 function setPeriod(p){
   period=p;
   document.querySelectorAll('.pp').forEach(el=>el.classList.remove('on'));
   const el=document.getElementById('p-'+p);if(el)el.classList.add('on');
   if(AD.all)render();
 }
-
 function render(){
   const{all}=AD;
   const svDone=cntP(all,F.svDone),svReq=cntP(all,F.svReq),svSch=cntP(all,F.svSch),rdySv=cntP(all,F.rdySv);
