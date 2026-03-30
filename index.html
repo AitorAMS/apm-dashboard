@@ -466,7 +466,8 @@ function render(){
   const inSch=cntP(all,F.inSch);
   const inRmv=cntP(all,F.inRmv);
   const apPart=cntP(all,F.apPart);
-  const exDone=cntP(all,F.exDone);
+  const exAll=all.filter(d=>d.pipeline_id===17);
+  const exDone=exAll.filter(d=>inPrd(d,F.exDone)).length;
 
   const tSv=getTarget('survey'),tAp=getTarget('approval'),tEg=getTarget('eg'),tIn=getTarget('install');
   const svAch=pct(svDone,tSv),apAch=pct(apPart,tAp),egAch=pct(egDone,tEg),inAch=pct(inDep,tIn);
@@ -508,7 +509,7 @@ function render(){
   const recentWeeks=Object.keys(WEEK_RANGES).slice(-4);
 
   // Extensiones mensuales
-  const exArr=MONTHS.map((_,m)=>byM(all,F.exDone,m));
+  const exArr=MONTHS.map((_,m)=>exAll.filter(d=>{const v=d[F.exDone];if(!v)return false;return String(v).startsWith('2026-'+String(m+1).padStart(2,'0'));}).length);
 
   // Pipeline visual
   const pvSteps=[
