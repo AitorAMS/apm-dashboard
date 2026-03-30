@@ -259,25 +259,20 @@ async function fetchAllByStatus(id,status){
   return all;
 }
 
-function isRelevant(d){
-  // Solo deals con alguna fecha relevante en 2025 o 2026
-  const fields=[F.svDone,F.svReq,F.svSch,F.rdySv,F.egDone,F.egReq,F.egSch,F.inDep,F.inDone,F.inLive,F.inSch,'add_time','update_time'];
-  return fields.some(f=>{
-    const v=d[f];
-    return v&&(String(v).startsWith('2025')||String(v).startsWith('2026'));
-  });
-}
 async function fetchPipe(id){
-  const [open,lost]=await Promise.all([
-    fetchAllByStatus(id,'open'),
-    fetchAllByStatus(id,'lost'),
-  ]);
-  const seen=new Set();
-  const all=[...open,...lost].filter(d=>{
-    if(seen.has(d.id))return false;
-    seen.add(d.id);return true;
-  }).filter(isRelevant);
-  console.log(`Pipeline ${id}: ${open.length} open + ${lost.length} lost = ${all.length} relevantes`);
+  let all=[],start=0,page=0;
+  while(true){
+    page++;
+    const d=await apiGet(`/pipelines/${id}/deals?limit=500&start=${start}&status=all_not_deleted`);
+    const b=d.data||[];
+    all=all.concat(b);
+    const more=d.additional_data?.pagination?.more_items_in_collection;
+    console.log(`Pipeline ${id} p${page}: ${b.length} deals, más: ${more}`);
+    if(!more||b.length===0)break;
+    start+=b.length;
+    if(page>50)break;
+  }
+  console.log(`Pipeline ${id} TOTAL: ${all.length}`);
   return all;
 }
 
