@@ -1247,74 +1247,9 @@ function renderNtoNetwork(){
 
 function showDoc(s,el){document.querySelectorAll('.docs-sec').forEach(e=>e.classList.remove('active'));document.querySelectorAll('.docs-nav-btn').forEach(e=>e.classList.remove('active'));document.getElementById('doc-'+s).classList.add('active');if(el)el.classList.add('active');}
 
-// ============================================
-// LOAD PIPEDRIVE & HUBSPOT DATA
-// ============================================
-
-async function loadPipedriveData() {
-  try {
-    const PIPEDRIVE_API_URL = 'https://apm-pipedrive-proxy.onrender.com/api/pipedrive';
-    const response = await fetch(PIPEDRIVE_API_URL);
-    if (!response.ok) {
-      console.warn('⚠️ Pipedrive data not available');
-      return null;
-    }
-    const data = await response.json();
-    console.log('✓ Pipedrive loaded:', data.summary);
-    return data;
-  } catch (error) {
-    console.warn('⚠️ Pipedrive error:', error);
-    return null;
-  }
-}
-
-async function loadHubSpotData() {
-  try {
-    const HUBSPOT_API_URL = 'https://apm-pipedrive-proxy.onrender.com/api/hubspot';
-    const response = await fetch(HUBSPOT_API_URL);
-    if (!response.ok) {
-      console.warn('⚠️ HubSpot data not available');
-      return null;
-    }
-    const data = await response.json();
-    console.log('✓ HubSpot loaded:', data.summary);
-    return data;
-  } catch (error) {
-    console.warn('⚠️ HubSpot error:', error);
-    return null;
-  }
-}
-
 // INIT
 updateNav();
 renderOvStatic();
-
-// Load CRM data on page load
-window.addEventListener('load', async () => {
-  console.log('Loading CRM data...');
-  
-  const pipedriveData = await loadPipedriveData();
-  if (pipedriveData) {
-    window.PIPEDRIVE_DATA = pipedriveData;
-    console.log('✓ Pipedrive data available in window.PIPEDRIVE_DATA');
-  }
-  
-  const hubspotData = await loadHubSpotData();
-  if (hubspotData) {
-    window.HUBSPOT_DATA = hubspotData;
-    console.log('✓ HubSpot data available in window.HUBSPOT_DATA');
-  }
-  
-  // Crear objeto combinado
-  if (pipedriveData || hubspotData) {
-    window.CRM_DATA = {
-      pipedrive: pipedriveData,
-      hubspot: hubspotData,
-      timestamp: new Date().toISOString()
-    };
-    console.log('✓ CRM data available in window.CRM_DATA');
-  }
-});
 </script>
 </body>
 </html>
